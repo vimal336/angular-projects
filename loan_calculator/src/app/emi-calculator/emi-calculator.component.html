@@ -1,0 +1,28 @@
+<div class="container">
+  
+  <div class="mb-3">
+    <label for="priciple-amount" class="form-label">Priciple Amount</label>
+    <input type="text"
+      class="form-control" name="" id="priciple-amount"  placeholder="" #pamount>
+  </div>
+  
+  <div class="mb-3">
+    <label for="duration" class="form-label">Duration</label>
+    <input type="text"
+      class="form-control" name="" id="duration"  placeholder="" #duration>
+  </div>
+  
+  <div class="mb-3">
+    <label for="" class="form-label">Loan-Type</label>
+    <select class="form-control" name="" id="loan_type" #loanType>
+      <option value="8">car loan</option>
+      <option value="7">House Loan</option>
+      <option value="10">Personal Loan</option>
+    </select>
+  </div>
+  
+  <button type="button" class="btn btn-success" (click)="calculateResult(pamount.value, duration.value, loanType.value)">submit</button>
+  <button type="button" class="btn btn-danger" >cancel</button>
+  <h2> EMI: {{ emi }}</h2>
+  
+  </div>
