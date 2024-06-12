@@ -16,8 +16,11 @@ export class HeaderComponent {
   getfunc(){
     return this.func
   };
-  clickme = 0;
-  click(){
-     this.clickme++;
+  clickcount = 0;
+  clickMe(){
+     this.clickcount++;
+  }
+  getMax(num1:number, num2:number){
+     return Math.max(num1,num2)
   }
 }
