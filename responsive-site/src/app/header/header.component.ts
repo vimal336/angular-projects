@@ -23,4 +23,6 @@ export class HeaderComponent {
   getMax(num1:number, num2:number){
      return Math.max(num1,num2)
   }
+  color = "brown";
+  isdisabled = "true"
 }
