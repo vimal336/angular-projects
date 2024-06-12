@@ -15,5 +15,9 @@ export class HeaderComponent {
   func = "creating functions in interpolation"
   getfunc(){
     return this.func
+  };
+  clickme = 0;
+  click(){
+     this.clickme++;
   }
 }
