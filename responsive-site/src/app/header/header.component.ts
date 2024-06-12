@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  framework ="Angular Js"
+  angular ="One Way Binding"
   doing = "learning"
+
+  func = "creating functions in interpolation"
+  getfunc(){
+    return this.func
+  }
 }
