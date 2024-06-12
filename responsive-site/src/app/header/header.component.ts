@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   angular ="One Way Binding"
-  doing = "learning"
+  doing = "gets innertext"
+
 
   func = "creating functions in interpolation"
   getfunc(){

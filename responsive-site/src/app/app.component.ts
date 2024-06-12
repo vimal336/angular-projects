@@ -11,6 +11,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'responsive-site';
-  names = 'vimal';
+  title = 'Interpolation(one way binding)';
+  names = 'Two way binding ';
 }
