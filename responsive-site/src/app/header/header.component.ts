@@ -33,4 +33,8 @@ export class HeaderComponent {
   handleInput(event:any) {
     this.val = (event.target as HTMLInputElement).value;
   }
+  val1= ''
+  handleInput1(event:any) {
+    this.val1 = (event.target as HTMLInputElement).value;
+  }
 }

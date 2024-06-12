@@ -9,5 +9,6 @@
 <button (click)="clickMe()">click event in angular</button>
 <button on-click="onclick()">on click button</button>
 <button disabled="isdisabled">Disabled Button</button>
-<p>With handle input:<input type="text" (input)="handleInput($event)">{{val}}</p>
-
+<input type="text" (input)="handleInput($event)">
+<p>With handle input:{{val}}</p>
+<p>Without handle input:{{val1}}</p>
