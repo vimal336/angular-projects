@@ -7,4 +7,7 @@
 <p>{{clickcount}}</p>
 <p style.color="{{color}}">Get maximum number function:{{getMax(100, 200)}}</p>
 <button (click)="clickMe()">click event in angular</button>
+<button on-click="onclick()">on click button</button>
 <button disabled="isdisabled">Disabled Button</button>
+<p>With handle input:<input type="text" (input)="handleInput($event)">{{val}}</p>
+
