@@ -1,28 +1,39 @@
 <h1>registering component</h1>
-<h1 [innerText]="angular">{{doing}}</h1>
-<h1>{{doing}}</h1>
-<p>{{getfunc()}}</p>
-<p>{{"This" + " " + "is" + " " + "concatenation"}}</p>
-<p>arithmetic operations using interpolation:{{10*10}}</p>
-<p>{{clickcount}}</p>
-<p style.color="{{color}}">Get maximum number function:{{getMax(100, 200)}}</p>
-<button (click)="clickMe()">click event in angular</button>
-<button on-click="onclick()">on click button</button>
-<button disabled="isdisabled">Disabled Button</button>
+<h1 [innerText]="angular">{{ doing }}</h1>
+<h1>{{ doing }}</h1>
+<p>{{ getfunc() }}</p>
 
-  
 
 <div class="handleinputs">
-    <h1 class="handle">Handle Inputs</h1>
-    <input type="text" (input)="handleInput($event); val1=$any($event.target).value">
-
-    <div>
-        <p>With handle input:{{val}}</p>
-        <p>Without handle input:{{val1}}</p>
-    </div>
-
+<p>{{ "This" + " " + "is" + " " + "concatenation" }}</p>
 </div>
 
-  
-  
+<div class="handleinputs">
+<p>arithmetic operations using interpolation:{{ 10 * 10 }}</p>
+</div>
 
+<div class="handleinputs">
+<p style.color="{{ color }}">
+  Get maximum number function:{{ getMax(100, 200) }}
+</p>
+</div>
+
+<div class="handleinputs">
+  <h1>click events</h1>
+  <p>{{ clickcount }}</p>
+  <button (click)="clickMe()">click event in angular</button>
+  <button on-click="onclick()">on click button</button>
+  <button disabled="isdisabled">Disabled Button</button>
+</div>
+
+<div class="handleinputs">
+  <h1 class="handle">Handle Inputs</h1>
+  <input
+    type="text"
+    (input)="handleInput($event); val1 = $any($event.target).value" />
+
+  <div>
+    <p>With handle input:{{ val }}</p>
+    <p>Without handle input:{{ val1 }}</p>
+  </div>
+</div>

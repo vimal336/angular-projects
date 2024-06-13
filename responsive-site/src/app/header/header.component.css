@@ -7,11 +7,11 @@ h1 {
 }
 
 .handleinputs {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  background-color: rgb(145, 215, 224);
-  padding: 1rem;
-  margin-top: 1rem;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+background-color: rgb(145, 215, 224);
+padding: 1rem;
+margin-top: 1rem;
 }
