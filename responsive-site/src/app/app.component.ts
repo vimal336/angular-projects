@@ -4,10 +4,11 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { AngularDirectivesComponent } from './angular-directives/angular-directives.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FormsModule, AngularDirectivesComponent ],
+  imports: [RouterOutlet, HeaderComponent, FormsModule, AngularDirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
