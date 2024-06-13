@@ -1,7 +1,10 @@
 <main class="main">
-  <h1>{{names}}</h1>
   <h1>{{title}}</h1>
-  <input type="text" [(ngModel)] = "names">
+  <div class="common-design">
+    <h1>Two way binding:{{names}}</h1>
+    <input type="text" [(ngModel)] = "names">
+  </div>
+
   <div class="content">
     <div class="left-side">
       <h1>app component html</h1>
