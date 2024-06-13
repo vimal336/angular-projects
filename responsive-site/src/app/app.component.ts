@@ -8,7 +8,7 @@ import { AngularDirectivesComponent } from './angular-directives/angular-directi
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FormsModule, AngularDirectivesComponent,RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, HeaderComponent, FormsModule, AngularDirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
