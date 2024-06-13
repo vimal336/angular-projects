@@ -1,32 +1,25 @@
 <h1>registering component</h1>
 
-
 <div class="handleinputs">
-    <h2>
-one way binding using Dom property
-    </h2>
-<h1 [innerText]="angular">{{ doing }}</h1>
+  <h2>one way binding using Dom property</h2>
+  <h1 [innerText]="angular">{{ doing }}</h1>
+</div>
+<div class="handleinputs">
+  <p>{{ getfunc() }}</p>
 </div>
 
 <div class="handleinputs">
-<h1>{{ doing }}</h1>
-</div>
-<div class="handleinputs">
-<p>{{ getfunc() }}</p>
+  <p>{{ "This" + " " + "is" + " " + "concatenation" }}</p>
 </div>
 
 <div class="handleinputs">
-<p>{{ "This" + " " + "is" + " " + "concatenation" }}</p>
+  <p>arithmetic operations using interpolation:{{ 10 * 10 }}</p>
 </div>
 
 <div class="handleinputs">
-<p>arithmetic operations using interpolation:{{ 10 * 10 }}</p>
-</div>
-
-<div class="handleinputs">
-<p style.color="{{ color }}">
-  Get maximum number function:{{ getMax(100, 200) }}
-</p>
+  <p style.color="{{ color }}">
+    Get maximum number function:{{ getMax(100, 200) }}
+  </p>
 </div>
 
 <div class="handleinputs">
@@ -41,10 +34,33 @@ one way binding using Dom property
   <h1 class="handle">Handle Inputs</h1>
   <input
     type="text"
-    (input)="handleInput($event); val1 = $any($event.target).value" />
+    (input)="handleInput($event); val1 = $any($event.target).value"
+  />
 
   <div>
     <p>With handle input:{{ val }}</p>
     <p>Without handle input:{{ val1 }}</p>
   </div>
+</div>
+
+<div>
+  <h2>
+    In Angular, directives are classes that add additional behavior to elements
+    in your Angular applications. You can attach them to elements in the DOM and
+    manipulate the DOM and its behavior using these directives. 
+    There are three
+    main types of directives in Angular:
+  </h2>
+
+  <ul>
+    <ol> Component Directives </ol>
+    <ol>Structural Directives </ol>
+    <ol>   Attribute Directives </ol>
+  </ul>
+  <p>
+    1. Component Directives Component directives
+    are the most common type of directives in Angular. They are basically
+    Angular components, which have a template, styles, and logic. Each component
+    is a directive with a template.
+  </p>
 </div>
