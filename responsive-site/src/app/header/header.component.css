@@ -22,3 +22,7 @@ background-color: rgb(215, 216, 203);
 padding: 1rem;
 margin-top: 1rem;
 }
+
+ol{
+  display: inline-block;
+}
