@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AngularDirectivesComponent {
  Title = "Directives";
- userlist = "List of users"
+ userlist = "List of users(NgFor)"
 
 users = [
   { id: 1, name: "Alice Johnson", email: "alice@example.com", age: 28 },
