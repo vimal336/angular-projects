@@ -56,4 +56,9 @@
     text-align: center;
     background-color: #a1bedd;
   }
+
+  .directives img{
+   width: 50%;
+   height: auto;
+  }
   
