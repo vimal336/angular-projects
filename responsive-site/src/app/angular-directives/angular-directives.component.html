@@ -42,7 +42,7 @@
 <label for=""><b>Type num 1 to 5:</b></label>
 
 
-  <input type="text" [(ngModel)]="num">
+  <input type="text"[(ngModel)]="num">
 
   <div [ngSwitch]="num">
   <div *ngSwitchCase="'1'"><b>One</b></div>
@@ -50,7 +50,13 @@
   <div *ngSwitchCase="'3'"><b>Three</b></div>
   <div *ngSwitchCase="'4'"><b>Four</b></div>
   <div *ngSwitchCase="'5'"><b>Five</b></div>
+  <div *ngSwitchDefault><b>invalid number</b></div>
   </div>
   
+</div>
+
+<div>
+  <h1>Ng If Example</h1>
+   <p *ngIf="true">NG IF true</p>
 </div>
 
