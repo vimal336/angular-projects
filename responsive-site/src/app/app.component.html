@@ -1,8 +1,10 @@
 <main class="main">
-  <div>
+  <div class="menu-bar">
     <ul>
-      <li><a routerLink="./header-component" routerLinkActive="active">First Component</a></li>
-      <li><a routerLink="./angular-directive-component" routerLinkActive="active">Second Component</a></li>
+      <li><a routerLink="./" routerLinkActive="active">App Component</a></li>
+      <li><a routerLink="./header" routerLinkActive="active">Header Component</a></li>
+      <li><a routerLink="./angular-directives" routerLinkActive="active">Directives Component</a></li>
+      <li><a routerLink="./angular-pipes" routerLinkActive="active">Pipes Component</a></li>
     </ul>
   </div>
   <h1>{{title}}</h1>
@@ -14,10 +16,14 @@
   <div class="content">
     <div class="left-side">
       <h1>app component html</h1>
-      <app-header> </app-header>
+      <!-- <app-header> </app-header> -->
     </div>
   </div>
-  <app-angular-directives> </app-angular-directives>
+  <!-- <app-angular-directives> </app-angular-directives> -->
+
+ 
+
+
 </main>
 
 <router-outlet />
