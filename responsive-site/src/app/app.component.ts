@@ -14,6 +14,5 @@ import { AngularPipesComponent } from './angular-pipes/angular-pipes.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Interpolation(one way binding)';
-  names = 'Two way binding ';
+  title = 'ANGULAR 18 LEARNING NOTES'
 }

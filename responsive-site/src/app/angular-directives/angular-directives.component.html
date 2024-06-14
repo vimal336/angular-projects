@@ -29,8 +29,21 @@
   </li>
 </ul> 
 
-<input type="text" [(ngModel)]="num">
 
-<div [ngSwitch]="num">
-<div *ngSwitchCase>One</div>
+<div class="ngswitch">
+  <h1>NgSwitch</h1>
+<label for=""><b>Type num 1 to 5:</b></label>
+
+
+  <input type="text" [(ngModel)]="num">
+
+  <div [ngSwitch]="num">
+  <div *ngSwitchCase="'1'"><b>One</b></div>
+  <div *ngSwitchCase="'2'"><b>Two</b></div>
+  <div *ngSwitchCase="'3'"><b>Three</b></div>
+  <div *ngSwitchCase="'4'"><b>Four</b></div>
+  <div *ngSwitchCase="'5'"><b>Five</b></div>
+  </div>
+  
 </div>
+

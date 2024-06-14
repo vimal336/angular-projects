@@ -26,3 +26,7 @@ margin-top: 1rem;
 ol{
   display: inline-block;
 }
+
+.data-bind img{
+ width: 400px;
+}

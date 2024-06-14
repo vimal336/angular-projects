@@ -11,6 +11,11 @@ h1{
     text-align: center;
 }
 
+.project-title{
+    background-color: red;
+    color: rgb(105, 238, 16);
+}
+
 
 .common-design {
     display: flex;
