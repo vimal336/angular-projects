@@ -57,6 +57,12 @@
 
 <div>
   <h1>Ng If Example</h1>
-   <p *ngIf="true">NG IF true</p>
+   <h3 *ngIf="true">NG IF True Statement</h3>
 </div>
 
+<div class="row bg-warning">
+<label for="">Check Bx</label> <input type="checkbox" [(ngModel)]="showme">
+<p>{{showme}}</p>
+<p *ngIf="showme"> Showme is checked</p>
+<p *ngIf="!showme"> Showme is not checked</p>
+</div>

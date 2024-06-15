@@ -13,6 +13,7 @@ export class AngularDirectivesComponent {
  Title = "Directives";
  userlist = "List of users using (NgFor)&(NgClass)";
  num = "";
+ showme = true;
 
 users = [
   { id: 1, name: "Alice Johnson", email: "alice@example.com", age: 28 },
