@@ -63,7 +63,7 @@
 <div class="row bg-warning">
 <label for="">Check Box</label> <input type="checkbox" [(ngModel)]="showme">
 <p>{{showme}}</p>
-<p *ngIf="showme; else"> Showme is checked</p>
+<p *ngIf="showme; else elseBlock"> Showme is checked</p>
 <p *ngIf="!showme"> Showme is not checked</p>
 </div>
 
