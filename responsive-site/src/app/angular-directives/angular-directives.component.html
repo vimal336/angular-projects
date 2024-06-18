@@ -36,6 +36,10 @@
   </li>
 </ul> 
 
+@for (user of users; track user.id) {
+  <p>{{ user.name }},{{user.id}}</p>
+}
+
 
 <div class="ngswitch">
   <h1>NgSwitch</h1>
