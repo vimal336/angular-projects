@@ -89,5 +89,8 @@
   
   <div>
     <h1>Attribute Directives</h1>
-    <input type="checkbox" [(ngModel)]>
+    <input type="checkbox" [(ngModel)]="enablebig">
+    <div [ngClass]="{'big':enablebig}">
+      class attribute
+    </div>
   </div>
