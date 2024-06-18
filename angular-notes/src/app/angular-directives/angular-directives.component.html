@@ -72,12 +72,11 @@
   <div class="row bg-warning">
   <label for="">Check Box</label> <input type="checkbox" [(ngModel)]="showme">
   <p>{{showme}}</p>
+
+
   <p *ngIf="showme; then thenBlock; else elseBlock"> Showme is checked</p>
   <p *ngIf="!showme"> Showme is not checked</p>
   </div>
-  
-  
-  
   <ng-template #thenBlock>
     <p> Showme is checked</p>
   </ng-template>
@@ -89,6 +88,8 @@
   
   <div>
     <h1>Attribute Directives</h1>
+    <p>In Angular, attribute directives are a powerful feature that allows you 
+        to manipulate the behavior and appearance of HTML elements. </p>
     <input type="checkbox" [(ngModel)]="enablebig">
     <div [ngClass]="{'big':enablebig}">
       class attribute
