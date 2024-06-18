@@ -37,7 +37,7 @@
 </ul> 
 
 @for (user of users; track user.id; let ind = $index; let c = $count) {
-  <p>{{ user.name }},{{user.id}},{{ind+1}} </p>
+  <p>{{ user.name }},S.no:{{ind+1}},total:{{c}} </p>
 }
 
 
