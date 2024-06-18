@@ -36,8 +36,8 @@
   </li>
 </ul> 
 
-@for (user of users; track user.id) {
-  <p>{{ user.name }},{{user.id}}</p>
+@for (user of users; track user.id; let ind = $index) {
+  <p>{{ user.name }},{{user.id}},{{ind+1}} </p>
 }
 
 
