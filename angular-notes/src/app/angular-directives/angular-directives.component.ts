@@ -14,6 +14,9 @@ export class AngularDirectivesComponent {
   userlist = "List of users using (NgFor)&(NgClass)";
   num = "";
   showme = true;
+  enablebig = false;
+  enableuline= false;
+  enablelinet = false;
  
  users = [
    { id: 1, name: "Alice Johnson", email: "alice@example.com", age: 28 },
