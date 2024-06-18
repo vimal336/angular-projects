@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-family: "Poppins", sans-serif;
+    color: rgb(38, 68, 8);
+    text-align: center;
+}
+
+.project-title{
+    background-color: red;
+    color: rgb(105, 238, 16);
+}
+
+
+.common-design {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(145, 215, 224);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+    
+
+.menu-bar ul a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+   
+}
+
+.menu-bar ul a:hover{
+    font-weight: 600;
+    text-decoration: underline;
+    transition: .3s;
+    color: rgb(247, 30, 14);
+   
+}
+
+.menu-bar ul{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(59, 223, 252);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    color: white;
+
+  }
+
+.menu-bar ul li{
+    font-weight: 400;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}

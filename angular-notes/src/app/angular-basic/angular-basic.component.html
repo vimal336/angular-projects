@@ -1,0 +1,54 @@
+<h1>DATA BINDING</h1>
+<div class="data-bind">
+  <img src="https://decodedscript.com/wp-content/uploads/2021/03/data-binding-in-angular-1.png" alt="">
+  <img src="https://www.c-sharpcorner.com/article/introduction-to-data-bindings-in-angular2/Images/image002.jpg" alt="">
+  <img src="https://www.tutorialsstar.com/wp-content/uploads/2021/05/1-Copy-768x406.png" alt="">
+</div>
+
+<h2>{{interpolation}}</h2>
+<div class="common-design">
+  <h1>Two way binding:{{names}}</h1>
+  <input type="text" [(ngModel)] = "names">
+</div>
+<div class="handleinputs">
+  <h2>one way binding using Dom property</h2>
+  <h1 [innerText]="angular">{{ doing }}</h1>
+</div>
+<div class="handleinputs">
+  <p>{{ getfunc() }}</p>
+</div>
+
+<div class="handleinputs">
+  <p>{{ "This" + " " + "is" + " " + "concatenation" }}</p>
+</div>
+
+<div class="handleinputs">
+  <p>arithmetic operations using interpolation:{{ 10 * 10 }}</p>
+</div>
+
+<div class="handleinputs">
+  <p style.color="{{ color }}">
+    Get maximum number function:{{ getMax(100, 200) }}
+  </p>
+</div>
+
+<div class="handleinputs">
+  <h1>click events</h1>
+  <p>{{ clickcount }}</p>
+  <button (click)="clickMe()">click event in angular</button>
+  <button on-click="onclick()">on click button</button>
+  <button disabled="isdisabled">Disabled Button</button>
+</div>
+
+<div class="handleinputs">
+  <h1 class="handle">Handle Inputs</h1>
+  <input
+    type="text"
+    (input)="handleInput($event); val1 = $any($event.target).value"
+  />
+
+  <div>
+    <p>With handle input:{{ val }}</p>
+    <p>Without handle input:{{ val1 }}</p>
+  </div>
+</div>

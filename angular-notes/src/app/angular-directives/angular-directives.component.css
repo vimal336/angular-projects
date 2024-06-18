@@ -1,0 +1,79 @@
+
+
+*{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: red;
+  }
+  .handle {
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  
+  .handleinputs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(215, 216, 203);
+  padding: 1rem;
+  margin-top: 1rem;
+  }
+  
+  ol{
+    display: inline-block;
+  }
+
+  .no-dot{
+    list-style: none;
+  }
+
+
+  ul li{
+    border: 1px solid black;
+  }
+
+  .bg-success {
+    background-color: #d4edda;
+  }
+  
+  .bg-warning {
+    background-color: #f8d7da;
+  }
+  
+  .first-color {
+    color: #343a40; 
+  }
+  
+  .last-color {
+    color: #b1bdca;
+  }
+
+  .ngswitch{
+    text-align: center;
+    background-color: #a1bedd;
+  }
+
+  .directives img{
+   width: 50%;
+   height: auto;
+  }
+
+/*------------------------Ng Class--------------------------------*/
+
+.big{
+ font-size: 2rem;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+/*-----------------------------------------------------------------*/
