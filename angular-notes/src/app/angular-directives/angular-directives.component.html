@@ -91,7 +91,11 @@
     <p>In Angular, attribute directives are a powerful feature that allows you 
         to manipulate the behavior and appearance of HTML elements. </p>
     <input type="checkbox" [(ngModel)]="enablebig">
-    <div [ngClass]="{'big':enablebig}">
+    <input type="checkbox" [(ngModel)]="enableuline">
+    <div [ngClass]="{'big':enablebig,'underline':enableuline}">
       class attribute
     </div>
   </div>
+
+
+
