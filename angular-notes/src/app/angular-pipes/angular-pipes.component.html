@@ -21,55 +21,41 @@
 
   <ol>
     <li>
-        <h4>Upper case pipe</h4>
-        <p>    {{ ucasepipe | uppercase }} </p>
-  
+      <h4>Upper case pipe</h4>
+      <p>{{ ucasepipe | uppercase }}</p>
     </li>
     <li>
-        <h4>
-          Lower case pipe
-        </h4>
-        <p>
-            {{ lcasepipe | lowercase }}
-        </p>
- 
+      <h4>Lower case pipe</h4>
+      <p>
+        {{ lcasepipe | lowercase }}
+      </p>
     </li>
     <li>
-        <h4>
-           Currency pipe
-        </h4>
-        <p>
-            currency Pipe : {{ currencypipe | currency : "INR" }}
-        </p>
-      
-    </li>
-    <li>
-        <h4>
-          Percentage Pipe Formatting Types
-        </h4>
-        <p>{{ percentagepipe | percent }}  </p>
-         <p>{{ 0.1234 | percent:'1.0-0' }}</p> 
-<p>{{ 0.1234 | percent:'1.1-1' }}</p> 
-<p>{{ 0.1234 | percent:'1.1-2' }}</p> 
+      <h4>Currency pipe</h4>
+      <p>{{ currencypipe | currency : "INR" }}</p>
+      <p>{{ 1234.567 | currency:'GBP':'code' }}</p>
+      <p>{{ 1234.567 | currency:'USD':'symbol':'1.0-0' }}</p>
+      <p>{{ 1234.567 | currency:'USD':'symbol':'1.1-2' }}</p>
+      <p>{{ 1234.567 | currency:'USD':'symbol':'1.2-2' }}</p> 
 
 
-      
     </li>
     <li>
-        <h4>
-            Json Pipe
-        </h4>
-        <p>Json Pipe:{{ jsonpipe | json }}</p>
-
+      <h4>Percentage Pipe Formatting Types</h4>
+      <p>{{ percentagepipe | percent }}</p>
+      <p>{{ 0.1234 | percent : "1.0-0" }}</p>
+      <p>{{ 0.1234 | percent : "1.1-1" }}</p>
+      <p>{{ 0.1234 | percent : "1.1-2" }}</p>
     </li>
     <li>
-        <h4>
-            Slice pipe
-        </h4>
-        <p>
-            {{ slicepipe | slice : 1 : 4 }}
-        </p>
-
+      <h4>Json Pipe</h4>
+      <p>Json Pipe:{{ jsonpipe | json }}</p>
+    </li>
+    <li>
+      <h4>Slice pipe</h4>
+      <p>
+        {{ slicepipe | slice : 1 : 4 }}
+      </p>
     </li>
     <li>
       <h4>Date Pipe Formatting Types</h4>
@@ -82,18 +68,22 @@
     </li>
     <li>
       <h4>Number Pipe Formatting types</h4>
-      <img class="pipenum" src="https://tse3.mm.bing.net/th?id=OIP.oGZOgMnNrPSWLgy1afC6SQHaDo&pid=Api&P=0&h=220" alt="">
+      <img
+        class="pipenum"
+        src="https://tse3.mm.bing.net/th?id=OIP.oGZOgMnNrPSWLgy1afC6SQHaDo&pid=Api&P=0&h=220"
+        alt=""
+      />
       <p>
         {{ 1234.5678 | number }}
       </p>
       <p>
-        {{ 1234.5678 | number : "1.2-2" }}
+        {{ 1234.5678000000 | number : "8.6-8" }}
       </p>
       <p>
         {{ 1234.5 | number : "1.2-2" }}
       </p>
       <p>
-        {{ 1234 | number : "5.4-5" }}
+        {{ 1234 | number : "5.1-5" }}
       </p>
     </li>
   </ol>
