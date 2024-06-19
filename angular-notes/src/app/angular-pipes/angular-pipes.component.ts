@@ -16,4 +16,12 @@ export class AngularPipesComponent {
  currencypipe =  1234.56;
  percentagepipe = 0.25;
  slicepipe = "slicepipe";
+ jsonpipe = {
+  name: 'John',
+  age: 30,
+  address: {
+    city: 'New York',
+    country: 'USA'
+  }
+};
 }

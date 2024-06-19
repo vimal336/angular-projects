@@ -36,19 +36,36 @@
       {{ percentagepipe | percent }}
     </li>
     <li>
-      <pre>{{ { name: "Angular", version: 11 } | json }}</pre>
+        <p>{{ items | json }}</p>
+
     </li>
     <li>
       {{ slicepipe | slice : 1 : 4 }}
     </li>
     <li>
-        <h4>Date Pipe Formatting Types</h4>
-    <p>Default format: {{ datepipe | date }}</p>
-    <p>shortDate: {{ datepipe | date:'shortDate' }}</p>
-    <p>mediumDate: {{ datepipe | date:'mediumDate' }}</p>
-    <p>longDate: {{ datepipe | date:'longDate' }}</p>
-    <p>fullDate: {{ datepipe | date:'fullDate' }}</p>
-    <p>Custom format: {{ datepipe | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+      <h4>Date Pipe Formatting Types</h4>
+      <p>Default format: {{ datepipe | date }}</p>
+      <p>shortDate: {{ datepipe | date : "shortDate" }}</p>
+      <p>mediumDate: {{ datepipe | date : "mediumDate" }}</p>
+      <p>longDate: {{ datepipe | date : "longDate" }}</p>
+      <p>fullDate: {{ datepipe | date : "fullDate" }}</p>
+      <p>Custom format: {{ datepipe | date : "yyyy-MM-dd HH:mm:ss" }}</p>
+    </li>
+    <li>
+      <h4>Number Pipe Formatting types</h4>
+      <img class="pipenum" src="https://tse3.mm.bing.net/th?id=OIP.oGZOgMnNrPSWLgy1afC6SQHaDo&pid=Api&P=0&h=220" alt="">
+      <p>
+        {{ 1234.5678 | number }}
+      </p>
+      <p>
+        {{ 1234.5678 | number : "1.2-2" }}
+      </p>
+      <p>
+        {{ 1234.5 | number : "1.2-2" }}
+      </p>
+      <p>
+        {{ 1234 | number : "5.4-5" }}
+      </p>
     </li>
   </ol>
 </div>
