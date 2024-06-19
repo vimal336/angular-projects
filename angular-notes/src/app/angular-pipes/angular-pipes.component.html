@@ -21,26 +21,52 @@
 
   <ol>
     <li>
-      {{ ucasepipe | uppercase }}
+        <h4>Upper case pipe</h4>
+        <p>    {{ ucasepipe | uppercase }} </p>
+  
     </li>
     <li>
-      {{ lcasepipe | lowercase }}
+        <h4>
+          Lower case pipe
+        </h4>
+        <p>
+            {{ lcasepipe | lowercase }}
+        </p>
+ 
     </li>
     <li>
-      {{ currencypipe | currency : "INR" }}
+        <h4>
+           Currency pipe
+        </h4>
+        <p>
+            currency Pipe : {{ currencypipe | currency : "INR" }}
+        </p>
+      
     </li>
     <li>
-      {{ datepipe | date : "shortDate" }}
+        <h4>
+          Percentage Pipe
+        </h4>
+        <p>
+            Percentage Pipe :{{ percentagepipe | percent }}
+
+        </p>
     </li>
     <li>
-      {{ percentagepipe | percent }}
-    </li>
-    <li>
-        <p>{{ items | json }}</p>
+        <h4>
+            Json Pipe
+        </h4>
+        <p>Json Pipe:{{ jsonpipe | json }}</p>
 
     </li>
     <li>
-      {{ slicepipe | slice : 1 : 4 }}
+        <h4>
+            Slice pipe
+        </h4>
+        <p>
+            {{ slicepipe | slice : 1 : 4 }}
+        </p>
+
     </li>
     <li>
       <h4>Date Pipe Formatting Types</h4>
