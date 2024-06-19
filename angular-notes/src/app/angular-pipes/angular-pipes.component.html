@@ -45,12 +45,15 @@
     </li>
     <li>
         <h4>
-          Percentage Pipe
+          Percentage Pipe Formatting Types
         </h4>
-        <p>
-            Percentage Pipe :{{ percentagepipe | percent }}
+        <p>{{ percentagepipe | percent }}  </p>
+         <p>{{ 0.1234 | percent:'1.0-0' }}</p> 
+<p>{{ 0.1234 | percent:'1.1-1' }}</p> 
+<p>{{ 0.1234 | percent:'1.1-2' }}</p> 
 
-        </p>
+
+      
     </li>
     <li>
         <h4>
