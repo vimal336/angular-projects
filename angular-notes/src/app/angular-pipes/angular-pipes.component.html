@@ -41,12 +41,13 @@
     <li>
       {{ slicepipe | slice : 1 : 4 }}
     </li>
+    <li>
     <p>Default format: {{ datepipe | date }}</p>
     <p>Short date: {{ datepipe | date:'shortDate' }}</p>
-    <p>Medium date: {{ datepipe | date:'mediumDate' }}</p>
-    <p>Long date: {{ datepipe | date:'longDate' }}</p>
-    <p>Full date: {{ datepipe | date:'fullDate' }}</p>
-    <p>Custom format: {{ today | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+    <p>mediumDate: {{ datepipe | date:'mediumDate' }}</p>
+    <p>longDate: {{ datepipe | date:'longDate' }}</p>
+    <p>fullDate: {{ datepipe | date:'fullDate' }}</p>
+    <p>Custom format: {{ datepipe | date:'yyyy-MM-dd HH:mm:ss' }}</p>
     </li>
   </ol>
 </div>
