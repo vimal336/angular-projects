@@ -15,4 +15,5 @@ export class AngularPipesComponent {
  datepipe = new Date();
  currencypipe =  1234.56;
  percentagepipe = 0.25;
+ slicepipe = "slicepipe";
 }

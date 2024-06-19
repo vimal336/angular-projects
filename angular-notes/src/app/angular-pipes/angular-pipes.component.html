@@ -1,38 +1,52 @@
-
 <h1>Angular Pipes</h1>
 
-<p>Pipes are simple functions to use in templates to accept an input value and return a transformed value.</p>
-
+<p>
+  Pipes are simple functions to use in templates to accept an input value and
+  return a transformed value.
+</p>
 
 <div class="pipes">
-    <img src="https://dotnettrickscloud.blob.core.windows.net/img/angular/angular-pipes1.png" alt="">
-    <img src="https://m-softtech.in/wp-content/uploads/2022/09/angular-pipe-800x445.jpg" alt="">
+  <img
+    src="https://dotnettrickscloud.blob.core.windows.net/img/angular/angular-pipes1.png"
+    alt=""
+  />
+  <img
+    src="https://m-softtech.in/wp-content/uploads/2022/09/angular-pipe-800x445.jpg"
+    alt=""
+  />
 </div>
-
 
 <div>
-    <h1>Built-in Pipes</h1>
-    
-<ol>
-    <li>
-        {{ ucasepipe | uppercase }}
-    </li>
-    <li>
-        {{ lcasepipe | lowercase }}
-    </li>
-    <li>
-        {{ currencypipe | currency:'INR' }}
+  <h1>Built-in Pipes</h1>
 
+  <ol>
+    <li>
+      {{ ucasepipe | uppercase }}
     </li>
     <li>
-        {{ datepipe | date:'shortDate' }}
+      {{ lcasepipe | lowercase }}
     </li>
     <li>
-        {{ 0.25 | percent }}
-
+      {{ currencypipe | currency : "INR" }}
     </li>
-</ol>
+    <li>
+      {{ datepipe | date : "shortDate" }}
+    </li>
+    <li>
+      {{ percentagepipe | percent }}
+    </li>
+    <li>
+      <pre>{{ { name: "Angular", version: 11 } | json }}</pre>
+    </li>
+    <li>
+      {{ slicepipe | slice : 1 : 4 }}
+    </li>
+    <p>Default format: {{ datepipe | date }}</p>
+    <p>Short date: {{ datepipe | date:'shortDate' }}</p>
+    <p>Medium date: {{ datepipe | date:'mediumDate' }}</p>
+    <p>Long date: {{ datepipe | date:'longDate' }}</p>
+    <p>Full date: {{ datepipe | date:'fullDate' }}</p>
+    <p>Custom format: {{ today | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+    </li>
+  </ol>
 </div>
-
-
-
