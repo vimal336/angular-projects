@@ -10,5 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './angular-pipes.component.css'
 })
 export class AngularPipesComponent {
- ucasepipe:string = "hello world";
+ ucasepipe:string = "inbuilt pipes : uppercase";
+ lcasepipe:string = "INBUILT PIPES : LOWERCASE";
+ datepipe = new Date();
+ currencypipe =  1234.56 
 }

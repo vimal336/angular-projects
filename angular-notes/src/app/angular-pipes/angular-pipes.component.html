@@ -9,7 +9,26 @@
     <img src="https://m-softtech.in/wp-content/uploads/2022/09/angular-pipe-800x445.jpg" alt="">
 </div>
 
-<h1>{{ ucasepipe | uppercase }}</h1>
+
+<div>
+    <h1>Built-in Pipes</h1>
+    
+<ol>
+    <li>
+        {{ ucasepipe | uppercase }}
+    </li>
+    <li>
+        {{ lcasepipe | lowercase }}
+    </li>
+    <li>
+        {{ currencypipe | currency:'INR' }}
+
+    </li>
+    <li>
+        {{ datepipe | date:'shortDate' }}
+    </li>
+</ol>
+</div>
 
 
 

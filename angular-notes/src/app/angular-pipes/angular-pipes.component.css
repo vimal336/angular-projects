@@ -7,3 +7,18 @@
 p,h1{
     text-align: center;
 }
+
+img{
+    height: auto;
+    width: 50%;
+}
+
+ol{
+    background-color: rgb(177, 236, 236);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
