@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-p,h1{
+p,h1,h3{
     text-align: center;
 }
 
@@ -26,4 +26,9 @@ ol{
 .pipenum{
     height: auto;
     width: 90%;
+}
+
+.reverse-pipe{
+    background-color: rgb(204, 172, 150);
+    padding: 2rem;
 }

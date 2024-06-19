@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReversePipe } from '../reverse.pipe';
 
 
 @Component({
   selector: 'app-angular-pipes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,ReversePipe],
   templateUrl: './angular-pipes.component.html',
   styleUrl: './angular-pipes.component.css'
 })
@@ -17,7 +18,7 @@ export class AngularPipesComponent {
  percentagepipe = 0.25;
  slicepipe = "slicepipe";
 
- 
+
  jsonpipe = {
   name: 'John',
   age: 30,
