@@ -14,4 +14,7 @@ import { MathsService } from './services/maths.service';
 })
 export class AppComponent {
    title = 'ANGULAR 17 LEARNING NOTES'
+   constructor(){
+    
+   }
 }
