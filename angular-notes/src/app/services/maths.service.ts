@@ -5,10 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class MathsService {
 
-  counter : number = 100;
+  _msg="Service in angular";
   constructor() {}
 
-  addOne(){
-    this.counter++
+  
+
+  getmessage(){
+    return this._msg;
   }
+
+  
 }
