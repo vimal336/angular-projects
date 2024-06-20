@@ -36,10 +36,15 @@
   </li>
 </ul> 
 
-@for (user of users; track user.id; let ind = $index; let c = $count) {
-  <p>{{ user.name }},S.no:{{ind+1}},total:{{c}} </p>
-}
+<h1>Angular ng for 18 version</h1>
 
+@for (user of users; track user.id; let ind = $index; let c = $count) {
+<ul>
+  <li>
+    {{ user.name }},S.no:{{ind+1}},total:{{c}} 
+  </li>
+</ul>
+}
 
 <div class="ngswitch">
   <h1>NgSwitch</h1>
