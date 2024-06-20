@@ -7,4 +7,8 @@ export class MathsService {
 
   counter : number = 100;
   constructor() {}
+
+  addOne(){
+    this.counter++
+  }
 }
