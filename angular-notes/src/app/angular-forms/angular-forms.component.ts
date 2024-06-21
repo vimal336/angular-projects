@@ -15,6 +15,7 @@ export class AngularFormsComponent {
 
    
   submit(form:NgForm){
+    console.log(form.value)
 
   }
 

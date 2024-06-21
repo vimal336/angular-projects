@@ -1,14 +1,14 @@
 <div class="form-container">
-        <form #contactForm="NgForm" (ngSubmit)="submit(subscribeForm)">
+        <form #contactForm="ngForm" (ngSubmit)="submit(contactForm)">
             <h2>Contact Us</h2>
             <label for="name">Name:</label>
             <input ngModel type="text" id="name" name="name" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input ngModel type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <!-- <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea> -->
 
             <button type="submit">Submit</button>
         </form>
