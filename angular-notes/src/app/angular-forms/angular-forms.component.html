@@ -1,5 +1,5 @@
 <div class="form-container">
-        <form>
+        <form #contactForm="NgForm" (ngSubmit)="submit(subscribeForm)">
             <h2>Contact Us</h2>
             <label for="name">Name:</label>
             <input ngModel type="text" id="name" name="name" required>
