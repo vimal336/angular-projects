@@ -19,9 +19,14 @@ export class AngularFormsComponent implements OnInit {
       console.log("my observable");
       obs.next('100')
     })
+   
+    myobs$.subscribe(sub => {
+      console.log(sub)
+    })
+
   }
 
-   
+  
   submit(form:NgForm){
     console.log(form.value)
 
