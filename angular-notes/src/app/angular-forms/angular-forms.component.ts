@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 
@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './angular-forms.component.html',
   styleUrl: './angular-forms.component.css'
 })
-export class AngularFormsComponent {
+export class AngularFormsComponent implements OnInit {
 
   constructor(){}
 
@@ -18,5 +18,7 @@ export class AngularFormsComponent {
     console.log(form.value)
 
   }
+
+
 
 }
