@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-angular-forms',
@@ -12,12 +12,18 @@ import { Observable } from 'rxjs';
 })
 export class AngularFormsComponent implements OnInit {
 
+  myDestroy: Subscription
+
   constructor(){}
 
   ngOnInit(): void {
   const myobs$ = new Observable(myobs => {
     console.log("My Observable");
-    console.log("200")
+    myobs.next("200")
+    setTimeout(() => {
+      myobs.next("400")
+    }, 400);
+    console.log("end observable")
   },
 
 )
@@ -25,6 +31,10 @@ export class AngularFormsComponent implements OnInit {
 myobs$.subscribe(obs=>{
   console.log(obs);
 },
+
+error => {
+  console.log(error)
+}
 
 )
 
