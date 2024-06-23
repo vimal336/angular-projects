@@ -13,6 +13,10 @@ export class AngularFormsComponent implements OnInit {
 
   constructor(){}
 
+  ngOnInit(): void {
+    
+  }
+
    
   submit(form:NgForm){
     console.log(form.value)
