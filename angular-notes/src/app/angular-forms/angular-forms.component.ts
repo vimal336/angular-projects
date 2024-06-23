@@ -12,9 +12,11 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class AngularFormsComponent implements OnInit {
 
-  myDestroy: Subscription
 
-  constructor(){}
+
+  constructor(){
+  
+  }
 
   ngOnInit(): void {
   const myobs$ = new Observable(myobs => {
