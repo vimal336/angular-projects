@@ -22,7 +22,14 @@ export class AngularFormsComponent implements OnInit {
    
     myobs$.subscribe(sub => {
       console.log(sub)
-    })
+    },
+    error =>{
+      console.log(error)
+    },
+    ()=>{
+      console.log("completed")
+    }
+  )
 
   }
 
