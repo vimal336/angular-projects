@@ -18,5 +18,10 @@ export default class ChildCompComponent {
  @Input() subjectChild: string = '';
  @Output() private numbergenerated1 = new  EventEmitter<number>();
 
+ public generateNumber(){
+  const randomNumber = Math.random();
+  this.numbergenerated1.emit(randomNumber);
+ }
+
 
 }

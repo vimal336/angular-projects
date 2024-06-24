@@ -47,7 +47,12 @@
 <!-- parent.component.html -->
 <div>
   <h1>Parent Component</h1>
-  <app-child-comp [subjectChild]="subjectParent"></app-child-comp>
+  <app-child-comp [subjectChild]="subjectParent" (numbergenerated1)="onNumberGenerated($event)"></app-child-comp>
+</div>
+
+<div>
+  <p>Random Number from child component</p>
+  <p>{{randomNumber | 'not yet generated'}}</p>
 </div>
 
 
