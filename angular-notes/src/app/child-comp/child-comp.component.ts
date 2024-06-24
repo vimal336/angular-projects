@@ -9,6 +9,7 @@ import { Component, input } from '@angular/core';
 })
 export default class ChildCompComponent {
 
-  @input() name:string
+name = "input"
+
 
 }
