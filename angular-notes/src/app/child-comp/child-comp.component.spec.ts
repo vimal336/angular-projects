@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildCompComponent } from './child-comp.component';
+import ChildCompComponent from './child-comp.component';
 
 describe('ChildCompComponent', () => {
   let component: ChildCompComponent;

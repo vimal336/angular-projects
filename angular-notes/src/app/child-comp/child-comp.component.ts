@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-child-comp',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './child-comp.component.html',
   styleUrl: './child-comp.component.css'
 })
-export class ChildCompComponent {
+export default class ChildCompComponent {
+
+  @input() name:string
 
 }
