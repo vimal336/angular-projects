@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { MathsService } from './services/maths.service';
 import ChildCompComponent from './child-comp/child-comp.component';
 import { ParentCompComponent } from './parent-comp/parent-comp.component';
+import { Server } from '../server.interface';
 
 
 @Component({
@@ -26,14 +27,15 @@ export class AppComponent {
 // }
 
 
-subjectParent: object = [
+
+subjectParent: Server[] = [
   { id: 1, name: 'Tamil' },
   { id: 2, name: 'English' },
   { id: 3, name: 'Maths' },
   { id: 4, name: 'Science' },
   { id: 5, name: 'Social' }
   
-  ]
+  ];
   
    
 }

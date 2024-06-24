@@ -39,12 +39,17 @@
     <div class="left-side">
       <h1>app component html</h1>
       <h1>Angular Commands</h1>
-      <img src="https://tse4.mm.bing.net/th?id=OIP.4GRVJHj7UgnqlI4gyuhyTwAAAA&pid=Api&P=0&h=220" alt="" srcset="">
+      <img src="./angular-pipes/parent-child-angular.png" alt="" srcset="">
       <!-- <app-angular-basic> </app-angular-basic> -->
     </div>
   </div>
 
-  <app-child-comp></app-child-comp>
+<!-- parent.component.html -->
+<div>
+  <h1>Parent Component</h1>
+  <app-child-comp [subjectChild]="subjectParent"></app-child-comp>
+</div>
+
 
   <!-- <p>{{_msg}}</p> -->
   

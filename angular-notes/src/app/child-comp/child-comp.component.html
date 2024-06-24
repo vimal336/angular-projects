@@ -1,2 +1,13 @@
 <p>child-comp works!</p>
-<p>{{name}}</p>
+
+<table>
+    <tbody>
+      <tr *ngFor="let subject of subjectChild">
+        <td>{{ subject.name }}</td>
+        <td>{{ subject.id }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-warning" (click) ="generateNumber()">Fire Event!</button>
+  
