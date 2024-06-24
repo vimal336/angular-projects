@@ -15,7 +15,7 @@ export default class ChildCompComponent {
 
  
 
- @Input() subjectChild: string = '';
+ @Input() subjectChild:any
  @Output() private numbergenerated1 = new  EventEmitter<number>();
 
  public generateNumber(){

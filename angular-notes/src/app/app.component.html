@@ -27,6 +27,8 @@
           <li><a routerLink="./angular-directives" routerLinkActive="active">Directives Component</a></li>
           <li><a routerLink="./angular-pipes" routerLinkActive="active">Pipes Component</a></li>
           <li><a routerLink="./angular-forms" routerLinkActive="active">Forms Component</a></li>
+          <li><a routerLink="./data-sharing" routerLinkActive="active">Data sharing Component</a></li>
+          <li><a routerLink="./angular-http-auth" routerLinkActive="active">Http Authentication</a></li>
         </div>
       </div>
     </div>
@@ -39,7 +41,6 @@
     <div class="left-side">
       <h1>app component html</h1>
       <h1>Angular Commands</h1>
-      <img src="./angular-pipes/parent-child-angular.png" alt="" srcset="">
       <!-- <app-angular-basic> </app-angular-basic> -->
     </div>
   </div>
@@ -50,9 +51,10 @@
   <app-child-comp [subjectChild]="subjectParent" (numbergenerated1)="onNumberGenerated($event)"></app-child-comp>
 </div>
 
+
 <div>
   <p>Random Number from child component</p>
-  <p>{{randomNumber | 'not yet generated'}}</p>
+  <p>{{randomNumber || 'not yet generated'}}</p>
 </div>
 
 

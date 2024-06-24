@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { MathsService } from './services/maths.service';
 import ChildCompComponent from './child-comp/child-comp.component';
 import { ParentCompComponent } from './parent-comp/parent-comp.component';
-import { Server } from '../server.interface';
+import { Subject } from './subject.interface';
 
 
 @Component({
@@ -26,16 +26,21 @@ export class AppComponent {
 
 // }
 
+randomNumber: number = 0;
 
 
-subjectParent: Server[] = [
-  { id: 1, name: 'Tamil' },
-  { id: 2, name: 'English' },
-  { id: 3, name: 'Maths' },
-  { id: 4, name: 'Science' },
-  { id: 5, name: 'Social' }
+subjectParent: Subject[] = [
+  { subid: 1, subname: 'Tamil' },
+  { subid: 2, subname: 'English' },
+  { subid: 3, subname: 'Maths' },
+  { subid: 4, subname: 'Science' },
+  { subid: 5, subname: 'Social' }
   
   ];
+
+public onNumberGenerated(randomNumber: number){
+  this.randomNumber = randomNumber;
+}
   
    
 }

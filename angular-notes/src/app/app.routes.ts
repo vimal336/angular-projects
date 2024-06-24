@@ -4,6 +4,8 @@ import { AngularDirectivesComponent } from './angular-directives/angular-directi
 import { AngularPipesComponent } from './angular-pipes/angular-pipes.component';
 import { AppComponent } from './app.component';
 import { AngularFormsComponent } from './angular-forms/angular-forms.component';
+import { DataSharingComponent } from './data-sharing/data-sharing.component';
+import { AngularHttpAuthComponent } from './angular-http-auth/angular-http-auth.component';
 
 export const routes: Routes = [
     {
@@ -26,5 +28,16 @@ export const routes: Routes = [
         path: 'angular-forms',
         component:  AngularFormsComponent,
     },
+    {
+        path: 'data-sharing',
+        component:  DataSharingComponent,
+    },
+
+    {
+        path: 'angular-http-auth',
+        component:  AngularHttpAuthComponent,
+    },
+ 
+ 
  
 ];
