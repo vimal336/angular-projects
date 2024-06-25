@@ -1,45 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-angular-forms',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './angular-forms.component.html',
   styleUrl: './angular-forms.component.css'
 })
-export class AngularFormsComponent implements OnInit {
+export class AngularFormsComponent {
 
 
 
-  ngOnInit(): void {
-    const myobs$ = new Observable(myobs => {
-      console.log("My Observable");
-      myobs.next("200")
-      setTimeout(() => {
-        myobs.next("400")
-      }, 400);
-      console.log("end observable")
-    },
-  
-  )
-  
-  myobs$.subscribe(obs=>{
-    console.log(obs);
-  },
-  
-  error => {
-    console.log(error)
-  }
-  
-  )
-  
-  
-  
-  }
-  
+
 
   constructor(){
   
