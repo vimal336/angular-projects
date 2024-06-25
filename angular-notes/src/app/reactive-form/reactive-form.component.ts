@@ -9,5 +9,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrl: './reactive-form.component.css'
 })
 export class ReactiveFormComponent {
+ 
+  createForm = new FormGroup({
+    firstname: new FormControl('',Validators.required),
+    lastname: new FormControl('',Validators.required),
+  })
 
 }

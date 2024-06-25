@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -8,25 +8,12 @@ import { ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './angular-forms.component.html',
-  styleUrl: './angular-forms.component.css'
+  styleUrl: './angular-forms.component.css',
 })
 export class AngularFormsComponent {
+  constructor() {}
 
-
-
-
-
-  constructor(){
-  
+  submit(form: NgForm) {
+    console.log(form.value);
   }
-
-
-  
-  submit(form:NgForm){
-    console.log(form.value)
-
-  }
-
-
-
 }

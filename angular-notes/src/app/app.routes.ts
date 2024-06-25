@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AngularFormsComponent } from './angular-forms/angular-forms.component';
 import { DataSharingComponent } from './data-sharing/data-sharing.component';
 import { AngularHttpAuthComponent } from './angular-http-auth/angular-http-auth.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 export const routes: Routes = [
     {
@@ -37,6 +38,11 @@ export const routes: Routes = [
         path: 'angular-http-auth',
         component:  AngularHttpAuthComponent,
     },
+    {
+        path: 'reactive-form',
+        component:  ReactiveFormComponent,
+    },
+ 
  
  
  
