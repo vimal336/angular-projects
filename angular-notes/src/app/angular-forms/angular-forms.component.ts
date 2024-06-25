@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-angular-forms',
@@ -14,35 +14,37 @@ export class AngularFormsComponent implements OnInit {
 
 
 
+  ngOnInit(): void {
+    const myobs$ = new Observable(myobs => {
+      console.log("My Observable");
+      myobs.next("200")
+      setTimeout(() => {
+        myobs.next("400")
+      }, 400);
+      console.log("end observable")
+    },
+  
+  )
+  
+  myobs$.subscribe(obs=>{
+    console.log(obs);
+  },
+  
+  error => {
+    console.log(error)
+  }
+  
+  )
+  
+  
+  
+  }
+  
+
   constructor(){
   
   }
 
-  ngOnInit(): void {
-  const myobs$ = new Observable(myobs => {
-    console.log("My Observable");
-    myobs.next("200")
-    setTimeout(() => {
-      myobs.next("400")
-    }, 400);
-    console.log("end observable")
-  },
-
-)
-
-myobs$.subscribe(obs=>{
-  console.log(obs);
-},
-
-error => {
-  console.log(error)
-}
-
-)
-
-
-
-}
 
   
   submit(form:NgForm){

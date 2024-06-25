@@ -1,1 +1,18 @@
 <p>angular-http-auth works!</p>
+
+<p>
+    {{todo}}
+</p>
+
+
+<div>
+    <h1>{{ name }}</h1>
+    <div *ngIf="todo">
+      <h2>{{ todo.title }}</h2>
+      <p>{{ todo.body }}</p>
+    </div>
+    <div *ngIf="!todo">
+      <p>Loading...</p>
+    </div>
+  </div>
+  
