@@ -22,10 +22,10 @@ export class AppComponent {
    
  _msg: string= "";
 
-// constructor(private _msgservice: MathsService){
-//  this._msg = _msgservice.getmessage();
+constructor(private _msgservice: MathsService){
+ this._msg = _msgservice.getmessage();
 
-// }
+}
 
 randomNumber: number = 0;
 

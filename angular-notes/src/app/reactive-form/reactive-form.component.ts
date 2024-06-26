@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { MathsService } from '../services/maths.service';
 
 
 
@@ -17,6 +18,14 @@ import { FormsModule } from '@angular/forms';
 
 
 export class ReactiveFormComponent {
+
+  _msg: string= "";
+
+  constructor(private _msgservice: MathsService){
+   this._msg = _msgservice.getmessage();
+  
+  }
+  
 
   // countrylist = [
   //   "country name",
