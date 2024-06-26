@@ -22,6 +22,9 @@ export class RxjsComponentComponent implements OnInit{
     }),
     (error:any)=>{
        console.log(error)
+    },
+    () => {
+      console.log('Completed');
     }
   }
 

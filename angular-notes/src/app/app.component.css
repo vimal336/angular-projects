@@ -12,7 +12,7 @@ h1{
 }
 
 .project-title{
-    background-color: red;
+    background-color: rgb(241, 241, 241);
     color: rgb(105, 238, 16);
 }
 
@@ -51,6 +51,7 @@ h1{
     font-family: "Poppins", sans-serif;
     list-style: none;
     color: white;
+    flex-direction: column;
 
   }
 
@@ -90,7 +91,7 @@ h1{
   
   .navbar .nav-container a {
     text-decoration: none;
-    color: #eeeeee;
+    color: #000000;
     font-weight: 500;
     font-size: 1.2rem;
     padding: 0.7rem;
@@ -155,7 +156,7 @@ h1{
   
   .navbar .menu-items {
     padding-top: 120px;
-    background-color: rgb(207, 21, 21, 0.8);
+    background-color: rgb(105, 238, 16);
     height: 80vh;
     width: 30%;
     transform: translate(-150%);

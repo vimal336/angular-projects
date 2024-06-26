@@ -10,7 +10,6 @@
       <li><a routerLink="./data-sharing" routerLinkActive="active">Data sharing Component</a></li>
       <li><a routerLink="./angular-http-auth" routerLinkActive="active">Http Authentication</a></li>
       <li><a routerLink="./rxjs-component" routerLinkActive="active">Rxjs</a></li>
-          
     </ul>
   </div>
   
@@ -43,18 +42,18 @@
  <!---------------------------------- Menu Bar Ends -------------------------------------------- -->
 
 
-  <h1 class="project-title">{{title}}</h1>
+  <p class="project-title">{{title}}</p>
   <div class="content">
-    <div class="left-side">
+    <!-- <div class="left-side">
       <h1>app component html</h1>
       <h1>Angular Commands</h1>
-      <!-- <app-angular-basic> </app-angular-basic> -->
-    </div>
+      <app-angular-basic> </app-angular-basic> 
+    </div> -->
   </div>
 
 <!-- parent.component.html -->
 <div>
-  <h1>Parent Component</h1>
+  <p>Parent Component</p>
   <app-child-comp [subjectChild]="subjectParent" (numbergenerated1)="onNumberGenerated($event)"></app-child-comp>
 </div>
 

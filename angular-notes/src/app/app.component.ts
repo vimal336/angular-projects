@@ -32,8 +32,7 @@ subjectParent: Subject[] = [
   { subid: 1, subname: 'Tamil' },
   { subid: 2, subname: 'English' },
   { subid: 3, subname: 'Maths' },
-  { subid: 4, subname: 'Science' },
-  { subid: 5, subname: 'Social' }
+ 
   
   ];
 
