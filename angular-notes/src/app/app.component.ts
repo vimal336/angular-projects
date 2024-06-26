@@ -8,8 +8,6 @@ import ChildCompComponent from './child-comp/child-comp.component';
 import { ParentCompComponent } from './parent-comp/parent-comp.component';
 import { Subject } from './subject.interface';
 
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
