@@ -2,12 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 
 @Component({
   selector: 'app-reactive-form',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule],
+  imports: [ReactiveFormsModule,CommonModule,FormsModule],
   templateUrl: './reactive-form.component.html',
   styleUrl: './reactive-form.component.css'
 })
@@ -16,25 +18,35 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 export class ReactiveFormComponent {
 
-  countrylist = [
-    "country name",
-    "Italy",
-    "India",
-  ]
+  // countrylist = [
+  //   "country name",
+  //   "Italy",
+  //   "India",
+  // ]
  
-  createForm = new FormGroup({
-    firstname: new FormControl('firstname',[Validators.required]),
-    lastname: new FormControl('',[Validators.required]),
-    email: new FormControl('',[Validators.required , Validators.email]),
-    country: new FormControl('',[Validators.required]),
-  })
+  // createForm = new FormGroup({
+  //   firstname: new FormControl('firstname',[Validators.required]),
+  //   lastname: new FormControl('',[Validators.required]),
+  //   email: new FormControl('',[Validators.required , Validators.email]),
+  //   country: new FormControl('',[Validators.required]),
+  // })
+
+  profileForm = new FormGroup({
+    firstName: new FormControl('',[Validators.required]),
+    lastName: new FormControl('',[Validators.required]),
+    
+  });
+
+  // onSubmit() {
+  //   if (this.createForm.valid) {
+  //     console.log(this.createForm.value);
+  //   } else {
+  //     console.log('Form is not valid');
+  //   }
+  // }
 
   onSubmit() {
-    if (this.createForm.valid) {
-      console.log(this.createForm.value);
-    } else {
-      console.log('Form is not valid');
-    }
+    console.log(this.profileForm.value);
   }
 
 }
