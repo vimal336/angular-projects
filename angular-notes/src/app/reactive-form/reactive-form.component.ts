@@ -52,7 +52,7 @@ export class ReactiveFormComponent {
         value: 'Vimal',
         disabled: false
     },[Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]),
-    email: new FormControl("",[Validators.required]),
+    email: new FormControl("",[Validators.required,Validators.email]),
     gender: new FormControl("",[Validators.required]),
     isMarried: new FormControl("",[Validators.requiredTrue]),
     country: new FormControl("",[Validators.required]),
