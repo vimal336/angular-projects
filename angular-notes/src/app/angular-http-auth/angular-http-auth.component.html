@@ -1,8 +1,13 @@
-<p>angular-http-auth works!</p>
 
 <p>{{todo.title}}</p>
 
-<!-- <div>
+<!-- 
+
+<p *ngIf="todo">{{ todo | json }}</p> -->
+
+<p *ngIf="postResponse">{{ postResponse | json }}</p>
+
+<div>
   <h1>{{ name }}</h1>
   <ul>
     <li *ngFor="let item of todo">
@@ -10,7 +15,4 @@
       <p>{{ item.body }}</p>
     </li>
   </ul>
-</div> -->
-
-
-  
+</div>  

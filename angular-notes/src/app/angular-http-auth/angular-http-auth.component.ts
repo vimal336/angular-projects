@@ -4,6 +4,7 @@ import { Todo } from '../subject.interface';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-angular-http-auth',
   standalone: true,
@@ -19,39 +20,29 @@ export class AngularHttpAuthComponent implements OnInit {
   ngOnInit(): void {
     this.getmethod();
     this.postmethod();
-
-    // Example Observable
-    // const myobs$ = new Observable((myobs) => {
-    //   console.log('My Observable');
-    //   myobs.next('200');
-    //   setTimeout(() => {
-    //     myobs.next('400');
-    //   }, 400);
-    //   console.log('end observable');
-    // });
-
-    // myobs$.subscribe(
-    //   (obs) => {
-    //     console.log(obs);
-    //   },
-    //   (error) => {
-    //     console.log(error);
-    //   }
-    // );
   }
 
   name = 'Http Authentication';
   todo: any = [];
+  postResponse: any = [];
+
+ 
+  public postmethod() {
+    let bod = {
+      title: 'fooh',
+      body: 'bar',
+      userId: 101,
+      id:1
+      };
+    this.http
+      .post<Todo>('https://jsonplaceholder.typicode.com/posts',bod)
+      .subscribe((data) => (this.todo =  data ));
+  }
 
   public getmethod() {
     this.http
-      .get<Todo>('https://jsonplaceholder.typicode.com/todos/1')
-      .subscribe((data) => (this.todo = console.log(data)));
+      .get<Todo>('https://jsonplaceholder.typicode.com/posts')
+      .subscribe((data) => (this.todo = data));
   }
 
-  public postmethod() {
-    this.http
-      .get<Todo>('https://jsonplaceholder.typicode.com/todos/',{})
-      .subscribe((data) => (this.todo = console.log(data)));
-  }
 }
