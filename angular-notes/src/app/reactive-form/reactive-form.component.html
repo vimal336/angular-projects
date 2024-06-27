@@ -13,22 +13,10 @@
   <button type="submit"[disabled]=createForm.invalid>submit</button>
 </form> -->
 
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-
-  <label for="first-name">First Name: </label>
-  <input id="first-name" type="text" formControlName="firstName">
-
-  <label for="last-name">Last Name: </label>
-  <input id="last-name" type="text" formControlName="lastName">
-
-  <p>Complete the form to enable button.</p>
-<button type="submit"[disabled]=!profileForm.valid>Submit</button>
-
-</form>
 
 <div class="container">
   <h3>Reactive Form</h3>
-  <form [formGroup]="contactForm" (submit)="onSubmit()">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <p>
         <label for="firstname">First Name </label>
         <input type="text" id="firstname" name="firstname" formControlName="firstName">

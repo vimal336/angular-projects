@@ -27,25 +27,6 @@ export class ReactiveFormComponent {
   }
   
 
-  // countrylist = [
-  //   "country name",
-  //   "Italy",
-  //   "India",
-  // ]
- 
-  // createForm = new FormGroup({
-  //   firstname: new FormControl('firstname',[Validators.required]),
-  //   lastname: new FormControl('',[Validators.required]),
-  //   email: new FormControl('',[Validators.required , Validators.email]),
-  //   country: new FormControl('',[Validators.required]),
-  // })
-
-  profileForm = new FormGroup({
-    firstName: new FormControl('',[Validators.required]),
-    lastName: new FormControl('',[Validators.required]),
-    
-  });
-
   contactForm = new FormGroup({
     firstName : new FormControl('',[Validators.required, Validators.minLength(2)]),
     lastName: new FormControl({
@@ -96,14 +77,6 @@ onSubmit() {
 }
 
 
-  // onSubmit() {
-  //   if (this.createForm.valid) {
-  //     console.log(this.createForm.value);
-  //   } else {
-  //     console.log('Form is not valid');
-  //   }
-  // }
 
-  
 
 }

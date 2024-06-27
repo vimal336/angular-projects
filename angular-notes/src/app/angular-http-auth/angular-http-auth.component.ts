@@ -18,7 +18,7 @@ export class AngularHttpAuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.getmethod();
-
+    this.postmethod();
     // Example Observable
     // const myobs$ = new Observable((myobs) => {
     //   console.log('My Observable');
@@ -45,6 +45,12 @@ export class AngularHttpAuthComponent implements OnInit {
   public getmethod() {
     this.http
       .get<Todo>('https://jsonplaceholder.typicode.com/todos/1')
-      .subscribe((data) => (this.todo = data));
+      .subscribe((data) => (this.todo = console.log(data)));
+  }
+
+  public postmethod() {
+    this.http
+      .get<Todo>('https://jsonplaceholder.typicode.com/todos/1')
+      .subscribe((data) => (this.todo = console.log(data)));
   }
 }
