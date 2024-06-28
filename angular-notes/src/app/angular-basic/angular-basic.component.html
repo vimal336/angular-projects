@@ -1,9 +1,9 @@
 <h1>DATA BINDING</h1>
-<div class="data-bind">
+<!-- <div class="data-bind">
   <img src="https://decodedscript.com/wp-content/uploads/2021/03/data-binding-in-angular-1.png" alt="">
   <img src="https://www.c-sharpcorner.com/article/introduction-to-data-bindings-in-angular2/Images/image002.jpg" alt="">
   <img src="https://www.tutorialsstar.com/wp-content/uploads/2021/05/1-Copy-768x406.png" alt="">
-</div>
+</div> -->
 
 <h2>{{interpolation}}</h2>
 <div class="common-design">
@@ -52,3 +52,16 @@
     <p>Without handle input:{{ val1 }}</p>
   </div>
 </div>
+
+<h1>property binding:</h1>
+<div [class]="className">This div has dynamic class</div>
+<button [disabled]="isDisabled">Click Me</button>
+<p [hidden]="isHidden">This paragraph is conditionally hidden</p>
+<a [href]="dynamicUrl">Click here</a>
+<div [id]="dynamicId">This div has a dynamic ID</div>
+<img [src]="imageUrl" [alt]="altText" [width]="imageWidth" [height]="imageHeight">
+<div [style.background-color]="bgColor">This div has dynamic background color</div>
+<p [title]="tooltip">Hover over this paragraph</p>
+<input [value]="inputValue" [placeholder]="placeholderText">
+<input type="checkbox" [checked]="isChecked">
+<input [readonly]="isReadOnly" placeholder="This input is read-only">

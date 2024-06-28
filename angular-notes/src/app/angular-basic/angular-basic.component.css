@@ -30,3 +30,7 @@
   .data-bind img{
    width: 400px;
   }
+
+  #dynamicId{
+    color: aqua;
+  }

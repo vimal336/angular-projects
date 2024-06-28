@@ -11,8 +11,8 @@ import { FormsModule } from '@angular/forms';
 export class AngularBasicComponent {
   interpolation = 'Interpolation(one way binding)';
   names = 'Two way binding ';
-  angular ="One Way Binding"
-  doing = "Property Binding"
+  angular ="One Way Binding";
+  doing = "Property Binding";
 
 
   func = "creating functions in interpolation"
@@ -40,4 +40,20 @@ export class AngularBasicComponent {
   handleInput1(event:any) {
     this.val1 = (event.target as HTMLInputElement).value;
   }
+
+  className = 'my-class';
+  isDisabled = true;
+  isHidden = false;
+  dynamicUrl = 'https://angular.io';
+  dynamicId = 'unique-id';
+  imageUrl = 'https://angular.io/assets/images/logos/angular/angular.png';
+  bgColor = 'lightblue';
+  tooltip = 'This is a tooltip';
+  inputValue = 'Initial Value';
+  altText = 'Angular Logo';
+  imageWidth = 200;
+  imageHeight = 100;
+  placeholderText = 'Enter your name';
+  isChecked = true;
+  isReadOnly = true;
 }
