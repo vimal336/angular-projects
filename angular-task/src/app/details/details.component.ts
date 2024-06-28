@@ -13,6 +13,8 @@ import { CommonModule } from '@angular/common';
 })
 export class DetailsComponent {
 
+  employees: any[] = [];
+
   contactForm = new FormGroup({
     firstName : new FormControl('',[Validators.required, Validators.minLength(2)]),
     lastName: new FormControl({
