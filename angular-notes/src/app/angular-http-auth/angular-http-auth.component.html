@@ -1,18 +1,17 @@
 
-<p>{{todo.title}}</p>
+<!-- <p>{{todo.title}}</p> -->
 
-<!-- 
+<h1>Http Methods</h1>
+<h2>Get Response</h2>
+<pre>{{ postResponse | json }}</pre> 
 
-<p *ngIf="todo">{{ todo | json }}</p> -->
+<h2>Post Response</h2>
+<pre>{{ todo | json }}</pre>
 
-<p *ngIf="postResponse">{{ postResponse | json }}</p>
+<h2>PUT Response</h2>
+<pre>{{ putResponse | json }}</pre>
 
-<div>
-  <h1>{{ name }}</h1>
-  <ul>
-    <li *ngFor="let item of todo">
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.body }}</p>
-    </li>
-  </ul>
-</div>  
+<h2>DELETE Response</h2>
+<pre>{{ deleteResponse | json }}</pre>
+
+  
