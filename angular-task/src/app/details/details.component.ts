@@ -33,7 +33,7 @@ export class DetailsComponent {
 })
 
 get firstname() {
-  return this.contactForm.get('firstName')
+return this.contactForm.get('firstName')
 }
 get lastname() {
   return this.contactForm.get('lastName')
@@ -61,8 +61,8 @@ get pincode() {
 }
 
 onSubmit() {
-    console.log(this.contactForm.value)
+    // console.log(this.contactForm.value)
+    this.employees.push(this.contactForm.value);
 }
-
 
 }

@@ -1,30 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    font-family: "Poppins", sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
+ 
 }
 
-form{
-    margin-bottom: 2rem;
-    text-align: center;
-    background-color: brown;
-    width: 50rem;
+.container {
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
-span{
-    color: red;
+.container h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
-.container{
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
+form {
+    background: url(http://getwallpapers.com/wallpaper/full/f/5/3/765467-gorgerous-business-wallpapers-1920x1200.jpg);
+  text-align: left; 
+  background-color: rgb(248, 162, 162);
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container h3{
-    text-align: center;
-    text-transform: uppercase;
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+select {
+  width: 50%; 
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; 
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f2f2f2;
 }
