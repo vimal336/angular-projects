@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,4 +10,11 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-task';
+  
+  isSticky: boolean = false;
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.isSticky = window.pageYOffset > 20;
+  }
 }
