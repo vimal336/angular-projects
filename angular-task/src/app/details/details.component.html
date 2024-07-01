@@ -39,6 +39,7 @@
             </span>
          </span>
         </p>
+
        
         <p>
           <label for="gender">Gender </label>
@@ -50,25 +51,34 @@
             </span>
           </span>
         </p>
-       
+
         <p>
-          <label for="isMarried">Married </label>
-          <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
-          <span  *ngIf="!marriedStatus?.valid && (marriedStatus?.touched || marriedStatus?.dirty)">
-            <span class="text-danger" *ngIf="marriedStatus?.errors?.['required']">
-               Married status is required
-            </span>
+          <label for="isMarried">Married</label>
+          <input type="radio" id="isMarried" name="isMarried" value="Yes" formControlName="isMarried"> Yes
+          <input type="radio" id="isMarried" name="isMarried" value="No" formControlName="isMarried"> No
+          <span *ngIf="isMarried?.invalid && (isMarried?.touched || isMarried?.dirty)">
+            <span class="text-danger" *ngIf="isMarried?.errors?.['required']">Married status is required</span>
           </span>
         </p>
-       
-       
+
+
+        <p>
+          <label for="salary">Salary</label>
+          <input type="number" id="salary" formControlName="salary">
+          <span *ngIf="!contactForm.get('salary')?.valid && (contactForm.get('salary')?.touched || contactForm.get('salary')?.dirty)">
+            <span class="text-danger" *ngIf="contactForm.get('salary')?.errors?.['required']">Salary is required</span>
+            <span class="text-danger" *ngIf="contactForm.get('salary')?.errors?.['min']">Salary must be at least 1000</span>
+            <span class="text-danger" *ngIf="contactForm.get('salary')?.errors?.['max']">Salary cannot exceed 100000</span>
+          </span>
+        </p>
+      
         <p>
           <label for="country">Country </label>
           <select id="country" name="country" formControlName="country">
-            <option value="1">India</option>
-            <option value="2">USA</option>
-            <option value="3">England</option>
-            <option value="4">Singapore</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="England">England</option>
+            <option value="Singapore">Singapore</option>
           </select>
           <span  *ngIf="!country?.valid && (country?.touched || country?.dirty)">
             <span class="text-danger" *ngIf="country?.errors?.['required']">
@@ -109,11 +119,12 @@
             </div>
          
         </div>
-       
-        <p>
-          <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+        <p class="btn">
+  
+            <button type="submit" [disabled]="!contactForm.valid">{{ isEditMode ? 'Update' : 'Submit' }}</button>
+            <button type="button" *ngIf="isEditMode" (click)="cancelEdit()">Cancel</button>
+
         </p>
-       
     </form>
   </div>
 
@@ -124,6 +135,7 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
+        <th>salary</th>
         <th>Gender</th>
         <th>Married</th>
         <th>Country</th>
@@ -133,16 +145,21 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let employee of employees">
-        <td>{{ employee.firstName }}</td>
-        <td>{{ employee.lastName }}</td>
+      <tr *ngFor="let employee of employees; let i = index">
+        <td>{{ employee.firstName | uppercase }}</td>
+        <td>{{ employee.lastName | uppercase  }}</td>
         <td>{{ employee.email }}</td>
-        <td>{{ employee.gender }}</td>
-        <td>{{ employee.isMarried ? 'Yes' : 'No' }}</td>
-        <td>{{ employee.country}}</td>
-        <td>{{ employee.address.city }}</td>
-        <td>{{ employee.address.street }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>{{ employee.gender | uppercase  }}</td>
+        <td>{{ employee.isMarried }}</td>
+        <td>{{ employee.country | uppercase }}</td>
+        <td>{{ employee.address.city | uppercase  }}</td>
+        <td>{{ employee.address.street | uppercase  }}</td>
         <td>{{ employee.address.pincode }}</td>
+        <td>
+          <button (click)="editEmployee(i)">Edit</button>
+        </td>
+
       </tr>
     </tbody>
   </table>

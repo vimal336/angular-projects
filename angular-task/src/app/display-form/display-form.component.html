@@ -1,29 +1,11 @@
-<h3>Employee List</h3>
-<table>
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Gender</th>
-      <th>Married</th>
-      <th>Country</th>
-      <th>City</th>
-      <th>Street</th>
-      <th>Pin Code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let employee of employees">
-      <td>{{ employee.firstName }}</td>
-      <td>{{ employee.lastName }}</td>
-      <td>{{ employee.email }}</td>
-      <td>{{ employee.gender }}</td>
-      <td>{{ employee.isMarried ? 'Yes' : 'No' }}</td>
-      <td>{{ employee.country}}</td>
-      <td>{{ employee.address.city }}</td>
-      <td>{{ employee.address.street }}</td>
-      <td>{{ employee.address.pincode }}</td>
-    </tr>
-  </tbody>
-</table>
+<!-- child-card.component.html -->
+<div class="card" *ngIf="employee">
+  <h3>Employee Details</h3>
+  <p><strong>Full Name:</strong> {{ employee?.fullName }}</p>
+  <p><strong>Email:</strong> {{ employee?.email }}</p>
+  <p><strong>Gender:</strong> {{ employee?.gender }}</p>
+  <p><strong>Job Title:</strong> {{ employee?.role}}</p>
+  <p><strong>Employment Status:</strong> {{ employee?.employmentStatus}}</p>
+  <p><strong>Joinign Date:</strong> {{ employee?.dateofjoin}}</p>
+  <p><strong>Address:</strong> {{ employee?.address?.city }} {{ employee?.address?.street }} {{ employee?.address?.pincode }}</p>
+</div>

@@ -14,6 +14,9 @@ import { CommonModule } from '@angular/common';
 export class DetailsComponent {
 
   employees: any[] = [];
+  editingIndex: number | null = null;
+  isEditMode = false;
+
 
   contactForm = new FormGroup({
     firstName : new FormControl('',[Validators.required, Validators.minLength(2)]),
@@ -23,7 +26,8 @@ export class DetailsComponent {
     },[Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]),
     email: new FormControl("",[Validators.required,Validators.email]),
     gender: new FormControl("",[Validators.required]),
-    isMarried: new FormControl("",[Validators.requiredTrue]),
+    salary: new FormControl(0, [Validators.required, Validators.min(1000), Validators.max(100000)]),
+    isMarried: new FormControl("",[Validators.required]),
     country: new FormControl("",[Validators.required]),
     address: new FormGroup({
       city: new FormControl("",[Validators.required]),
@@ -41,10 +45,17 @@ get lastname() {
 get email() {
   return this.contactForm.get('email')
 }
+
 get gender() {
   return this.contactForm.get('gender')
 }
-get marriedStatus() {
+get salary() {
+  return this.contactForm.get('salary')
+}
+get mobileNumber() {
+  return this.contactForm.get('salary')
+}
+get isMarried() {
   return this.contactForm.get('isMarried')
 }
 get country() {
@@ -61,8 +72,32 @@ get pincode() {
 }
 
 onSubmit() {
-    // console.log(this.contactForm.value)
+  if (this.isEditMode && this.editingIndex !== null) {
+    this.employees[this.editingIndex] = this.contactForm.value;
+    this.isEditMode = false;
+    this.editingIndex = null;
+  } else {
     this.employees.push(this.contactForm.value);
+  }
+  this.contactForm.reset();
 }
 
+editEmployee(index: number) {
+  this.isEditMode = true;
+  this.editingIndex = index;
+  this.contactForm.setValue(this.employees[index]);
 }
+
+
+cancelEdit() {
+  this.isEditMode = false;
+  this.editingIndex = null;
+  this.contactForm.reset();
+}
+}
+
+
+
+
+
+

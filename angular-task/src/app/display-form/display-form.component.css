@@ -1,13 +1,21 @@
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .table {
-    margin-top: 20px;
-  }
-  
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 20px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 300px;
+}
