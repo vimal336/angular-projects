@@ -14,13 +14,14 @@ h3{
 }
 
 .container {
-  background: url("/assets/img/4.jpeg");
+ 
   width: 60%;
   margin: 20px auto;
   padding: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+	background: #a8a1a1; 
+  border: 1px solid #030303;
   border-radius: 8px;
+  background: url("/assets/img/3.jpg");
 }
 
 /* Form styling */
@@ -94,7 +95,7 @@ table td {
 }
 
 table th {
-  background-color: #f2f2f2;
+  background-color: #148dff;
 }
 
 /* Responsive design */

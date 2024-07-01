@@ -15,16 +15,18 @@ body{
   width: 100%
 }
 nav{
+  border: 2px solid black;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   transition: all 0.4s ease;
-  background-color: cadetblue;
+  background-color: #148dff;
 }
+
 nav.sticky{
   padding: 15px 20px;
-  background: #4070f4;
+  background: #e3e3e3; 
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 nav .nav-content{

@@ -13,7 +13,7 @@
     align-items: flex-end; 
     min-height: 100vh; 
     padding: 20px;
-    background: url("/assets/img/1.jpg");
+ 
 }
 
 .left-section, .right-section {
@@ -24,10 +24,13 @@
 
 .left-section {
     background-color: #dbd0ca;
+    background: url("/assets/img/6.jpg");
+    object-fit: cover;
+    background-size: cover; 
 }
 
 .right-section {
-    background-color: #e2e2e2;
+	background: #ffefef; 
 }
 
 @media (min-width: 768px) {
@@ -49,6 +52,7 @@ margin: .5rem 0;
 
 label{
   margin-right: 2rem;
+  font-weight: 800;
 }
 
 button {
