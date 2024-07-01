@@ -21,7 +21,7 @@ h3{
 	background: #a8a1a1; 
   border: 1px solid #030303;
   border-radius: 8px;
-  background: url("/assets/img/3.jpg");
+  background: linear-gradient(rgba(53, 59, 72, 0.3), rgba(53, 59, 72, 0.6)), url("/assets/img/3.jpg");
 }
 
 /* Form styling */
@@ -76,8 +76,11 @@ button:disabled {
 
 /* Validation error message */
 .text-danger {
-  color: red;
   font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  background-color: red;
 }
 
 /* Table styling */

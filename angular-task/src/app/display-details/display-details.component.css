@@ -27,10 +27,12 @@
     background: url("/assets/img/6.jpg");
     object-fit: cover;
     background-size: cover; 
+    border: 3px solid black;
 }
 
 .right-section {
-	background: #ffefef; 
+	background: #c9caca; 
+  border: 3px solid black;
 }
 
 @media (min-width: 768px) {
@@ -39,7 +41,7 @@
     }
 
     .left-section {
-        height: 30rem; 
+        height: 29rem; 
     }
 }
 
@@ -71,6 +73,9 @@ button:disabled {
 }
 
 .text-danger{
-  color: red;
+  font-family: "Poppins", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  background-color: red;
 }
 
