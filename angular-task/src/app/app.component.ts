@@ -12,10 +12,4 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'angular-task';
   
-  isSticky: boolean = false;
-
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    this.isSticky = window.pageYOffset > 20;
-  }
 }
