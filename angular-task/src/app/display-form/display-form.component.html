@@ -1,4 +1,3 @@
-<!-- child-card.component.html -->
 <div class="card" *ngIf="employee">
   <h3>Employee Details</h3>
   <p><strong>Full Name:</strong> {{ employee?.fullName }}</p>
@@ -6,6 +5,6 @@
   <p><strong>Gender:</strong> {{ employee?.gender }}</p>
   <p><strong>Job Title:</strong> {{ employee?.role}}</p>
   <p><strong>Employment Status:</strong> {{ employee?.employmentStatus}}</p>
-  <p><strong>Joinign Date:</strong> {{ employee?.dateofjoin}}</p>
+  <p><strong>Joinign Date:</strong> {{ employee?.dateofjoin | date}}</p>
   <p><strong>Address:</strong> {{ employee?.address?.city }} {{ employee?.address?.street }} {{ employee?.address?.pincode }}</p>
 </div>

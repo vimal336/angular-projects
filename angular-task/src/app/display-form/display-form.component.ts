@@ -12,4 +12,5 @@ import { DisplayDetailsComponent } from '../display-details/display-details.comp
 })
 export class DisplayFormComponent {
   @Input() employee: any; 
+  date = new Date();
 }

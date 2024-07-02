@@ -21,7 +21,7 @@ export class DetailsComponent {
   contactForm = new FormGroup({
     firstName : new FormControl('',[Validators.required, Validators.minLength(2)]),
     lastName: new FormControl({
-        value: 'Vimal',
+        value: '',
         disabled: false
     },[Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]),
     email: new FormControl("",[Validators.required,Validators.email]),
@@ -87,7 +87,6 @@ editEmployee(index: number) {
   this.editingIndex = index;
   this.contactForm.setValue(this.employees[index]);
 }
-
 
 cancelEdit() {
   this.isEditMode = false;
