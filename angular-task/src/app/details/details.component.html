@@ -1,15 +1,15 @@
 <div class="container">
     <h3>Employee Enrollment Form</h3>
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="contactForm"(ngSubmit)="onSubmit()">
         <p>
           <label for="firstname">First Name </label>
           <input type="text" id="firstname" name="firstname" formControlName="firstName">
           <span  *ngIf="!firstname?.valid && (firstname?.touched || firstname?.dirty)">
              <span class="text-danger" *ngIf="firstname?.errors?.['required']">
-                Firstname is required
+                *Firstname is required
              </span>
              <span class="text-danger" *ngIf="firstname?.errors?.['minlength']">
-                Minimum length is 2 Character
+                *Minimum length is 2 Character
              </span>
           </span>
         </p>
@@ -19,47 +19,54 @@
           <input type="text" id="lastname" name="lastname" formControlName="lastName">
           <span  *ngIf="!lastname?.valid && (lastname?.touched || lastname?.dirty)">
             <span class="text-danger" *ngIf="lastname?.errors?.['required']">
-               Lastname is required
+               *Lastname is required
             </span>
             <span class="text-danger" *ngIf="lastname?.errors?.['maxlength']">
-               Maximum length is 15 Characters
+               *Maximum length is 15 Characters
             </span>
             <span class="text-danger" *ngIf="lastname?.errors?.['pattern']">
-               Only characters are allowed
+               *Only characters are allowed
             </span>
          </span>
         </p>
-       
-        <p>
-          <label for="email">Email </label>
-          <input type="text" id="email" name="email" formControlName="email">
-          <span  *ngIf="!email?.valid && (email?.touched || email?.dirty)">
-            <span class="text-danger" *ngIf="email?.errors?.['required']">
-               Email is required
-            </span>
-         </span>
-        </p>
-
-       
-        <p>
-          <label for="gender">Gender </label>
-          <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
-          <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
-          <span  *ngIf="!gender?.valid && (gender?.touched || gender?.dirty)">
-            <span class="text-danger" *ngIf="gender?.errors?.['required']">
-               Gender is required
-            </span>
-          </span>
-        </p>
+      
 
         <p>
           <label for="isMarried">Married</label>
           <input type="radio" id="isMarried" name="isMarried" value="Yes" formControlName="isMarried"> Yes
           <input type="radio" id="isMarried" name="isMarried" value="No" formControlName="isMarried"> No
           <span *ngIf="isMarried?.invalid && (isMarried?.touched || isMarried?.dirty)">
-            <span class="text-danger" *ngIf="isMarried?.errors?.['required']">Married status is required</span>
+            <span class="text-danger" *ngIf="isMarried?.errors?.['required']">*Married status is required</span>
           </span>
         </p>
+
+        <p>
+          <label for="gender">Gender </label>
+          <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+          <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+          <span  *ngIf="!gender?.valid && (gender?.touched || gender?.dirty)">
+            <span class="text-danger" *ngIf="gender?.errors?.['required']">
+               *Gender is required
+            </span>
+          </span>
+        </p>
+
+        <p>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" formControlName="email">
+          <span *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+            <span class="text-danger" *ngIf="email?.errors?.['required']">
+              *Email is required
+            </span>
+            <span class="text-danger" *ngIf="email?.errors?.['email']">
+              *Please enter a valid email address
+            </span>
+            <span class="text-danger" *ngIf="email?.errors?.['pattern']">
+              *Email format is incorrect
+            </span>
+          </span>
+        </p>
+        
 
 
         <p>
@@ -142,6 +149,7 @@
         <th>City</th>
         <th>Street</th>
         <th>Pin Code</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>

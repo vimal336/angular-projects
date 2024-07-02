@@ -24,7 +24,11 @@ export class DetailsComponent {
         value: '',
         disabled: false
     },[Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]),
-    email: new FormControl("",[Validators.required,Validators.email]),
+    email: new FormControl("", [
+      Validators.required,
+      Validators.email,
+      Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$')
+    ]),
     gender: new FormControl("",[Validators.required]),
     salary: new FormControl(0, [Validators.required, Validators.min(1000), Validators.max(100000)]),
     isMarried: new FormControl("",[Validators.required]),
@@ -87,6 +91,7 @@ editEmployee(index: number) {
   this.editingIndex = index;
   this.contactForm.setValue(this.employees[index]);
 }
+
 
 cancelEdit() {
   this.isEditMode = false;
