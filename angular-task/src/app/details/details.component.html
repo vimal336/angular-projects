@@ -133,8 +133,10 @@
   
             <button type="submit" [disabled]="!contactForm.valid">{{ isEditMode ? 'Update' : 'Submit' }}</button>
             <button type="button" *ngIf="isEditMode" (click)="cancelEdit()">Cancel</button>
-
+            <span *ngIf="!contactForm.valid && contactForm.touched" class="text-danger">*Please fill all required fields*</span>
         </p>
+
+       
     </form>
 </div>
 
