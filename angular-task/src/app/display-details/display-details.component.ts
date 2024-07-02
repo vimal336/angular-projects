@@ -74,5 +74,8 @@ export class DisplayDetailsComponent {
 
   onSubmit() {
     this.employee = this.employeeForm.value;
+    alert('Employee Details submitted successfully!');
+    this.employeeForm.reset();
   }
+  
 }
