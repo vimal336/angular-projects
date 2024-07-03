@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DisplayDetailsComponent } from '../display-details/display-details.component';
+import { Employee } from '../employeemodal';
 
 @Component({
   selector: 'app-display-form',

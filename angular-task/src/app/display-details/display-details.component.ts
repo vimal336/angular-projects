@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DisplayFormComponent } from '../display-form/display-form.component';
+import { Employee } from '../employeemodal';
+
 
 @Component({
   selector: 'app-display-details',
@@ -15,7 +17,7 @@ import { DisplayFormComponent } from '../display-form/display-form.component';
 export class DisplayDetailsComponent {
   employeeForm: FormGroup;
 
-  employee: any = {};
+  employee: Employee[] = [];
 
   constructor(private fb: FormBuilder) {
     this.employeeForm = this.fb.group({

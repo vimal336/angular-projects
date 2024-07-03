@@ -61,7 +61,6 @@ export class DetailsComponent {
   get email() {
     return this.contactForm.get('email');
   }
-
   get gender() {
     return this.contactForm.get('gender');
   }
@@ -89,11 +88,13 @@ export class DetailsComponent {
 
   onSubmit() {
     if (this.isEditMode && this.editingIndex !== null) {
-      this.employees[this.editingIndex] = this.contactForm.value;
+      // Update existing employee in array
+      this.employees[this.editingIndex] = { ...this.contactForm.value, id: this.employees[this.editingIndex].id };
       this.isEditMode = false;
       this.editingIndex = null;
     } else {
-      this.employees.push({ ...this.contactForm.value });
+      // Add new employee to array
+      this.employees.push({ ...this.contactForm.value, id: this.employees.length + 1 });
 
       alert('Form submitted successfully!');
     }
@@ -104,6 +105,7 @@ export class DetailsComponent {
     this.isEditMode = true;
     this.editingIndex = index;
     const employeeToEdit = { ...this.employees[index] };
+    delete employeeToEdit.id; // Remove id temporarily to avoid binding issues
     this.contactForm.setValue(employeeToEdit);
   }
 
