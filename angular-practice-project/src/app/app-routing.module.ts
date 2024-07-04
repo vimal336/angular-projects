@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 
+
 const routes: Routes = [
   {
     path: '',
