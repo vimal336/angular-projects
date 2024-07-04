@@ -8,6 +8,7 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 import { HomeComponent } from './home/home.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserModule,
     MatToolbarModule,
     AppRoutingModule,
+    MatIconModule,
   ],
   providers: [MathsService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
