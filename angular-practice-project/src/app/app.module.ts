@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -23,6 +26,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     AppRoutingModule,
     MatIconModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatInputModule
   ],
   providers: [MathsService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
