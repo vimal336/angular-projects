@@ -1,5 +1,6 @@
+import { Inject, Injectable } from "@angular/core";
 import { todo } from "../todo.model";
-import { Store } from "@datorama/akita";
+import { Store, StoreConfig } from "@datorama/akita";
 
 export interface TodoState{
     todos: todo[];
@@ -15,7 +16,11 @@ export const getInitialState = () => {
     };
     };
 
-@StoreConfig()
+    @Injectable({
+        providedIn : 'root'
+    })
+
+@StoreConfig(  {name: 'todo'})
 
 export class TodoStore extends Store<TodoState>{
     constructor(){
