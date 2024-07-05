@@ -8,12 +8,14 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class TodoservService {
+  private readonly baseUrl = environment.baseurl;
+
 
   constructor(private http: HttpClient) {
 
    }
 
-   addTodo(title:string, description:string):Observable<todo>{
+   addTodo(name:string, job:string):Observable<todo>{
     return this.http.get()
    }
 }
