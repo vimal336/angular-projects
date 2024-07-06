@@ -1,3 +1,4 @@
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatFormField, MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TodoservService } from './services/todoserv.service';
+import { MatCard } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
+
 
 
 @NgModule({
@@ -24,6 +30,7 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     MatToolbarModule,
     AppRoutingModule,
     MatIconModule,
@@ -31,9 +38,12 @@ import { MatButtonModule } from '@angular/material/button';
     MatProgressSpinnerModule,
     MatInputModule,
     MatButtonModule,
-    MatFormField
+    MatFormField,
+    MatCard,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [MathsService, provideAnimationsAsync()],
+  providers: [MathsService,TodoservService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule {

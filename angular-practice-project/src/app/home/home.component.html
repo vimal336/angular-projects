@@ -1,21 +1,22 @@
-
 <div class="container">
-    <mat-card class="todo-card">
-      <mat-card-header>
-        <mat-card-title>Todo List</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-form-field class="full-width">
-          <mat-label>New Todo</mat-label>
-          <input matInput placeholder="Enter a new todo">
-        </mat-form-field>
-        <button (click) = "addTodo()" mat-raised-button color="primary" class="add-todo-btn">Add Todo</button>
-      </mat-card-content>
-    </mat-card>
-    
-    <mat-card class="todo-item">
-      <p>My Todo</p>
-      <button mat-stroked-button color="accent">Mark as Completed</button>
-    </mat-card>
-  </div>
-  
+  <mat-card class="todo-card">
+    <mat-card-header>
+      <mat-card-title>Todo List</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <mat-label>New Todo</mat-label>
+        <input matInput placeholder="Enter a new todo">
+      </mat-form-field>
+      <button (click)="addTodo()" mat-raised-button color="primary" class="add-todo-btn">Add Todo</button>
+      <mat-spinner *ngIf="loading"></mat-spinner>
+      <ng-container *ngFor="let todo of todos">
+        <p>{{ todo.name }}</p>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="todo-item">
+    <p>My Todo</p>
+    <button mat-stroked-button color="accent">Mark as Completed</button>
+  </mat-card>
+</div>

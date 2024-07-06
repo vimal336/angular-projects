@@ -3,12 +3,13 @@
 </div>
 
 <mat-card>
-    <form>
+    <form [formGroup]="form!" (ngSubmit)="form?.valid && addTodo()" >
         <mat-form-field appearance = "outline">
-            <input matInput placeholder="Title"/>
+            <input formControlName = "name" matInput placeholder="name"/>
         </mat-form-field>
         <mat-form-field appearance = "outline">
-            <input matInput placeholder="Description"/>
+            <input formControlName = "job" matInput placeholder="job"/>
         </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Add Todo</button>
     </form>
 </mat-card>
