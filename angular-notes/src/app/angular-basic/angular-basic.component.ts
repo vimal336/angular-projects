@@ -51,7 +51,7 @@ export class AngularBasicComponent {
   tooltip = 'This is a tooltip';
   inputValue = 'Initial Value';
   altText = 'Angular Logo';
-  imageWidth = 200;
+  imageWidth = 100;
   imageHeight = 100;
   placeholderText = 'Enter your name';
   isChecked = true;
