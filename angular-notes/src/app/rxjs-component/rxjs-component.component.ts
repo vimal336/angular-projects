@@ -85,11 +85,6 @@ export default class RxjsComponentComponent implements OnInit {
   }
 
 
-  of(1, 2, 3)
-  .pipe(map((x) => x * x))
-  .subscribe((v) => console.log(`value: ${v}`));
-
-
 
 
 
