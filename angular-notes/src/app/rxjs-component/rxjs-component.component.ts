@@ -3,12 +3,13 @@ import { Observable, interval } from 'rxjs';
 import { of } from 'rxjs';
 import { from, take } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { filter, map } from 'rxjs/operators';
+import { count, filter, map } from 'rxjs/operators';
+import { RxjsOperatorsComponent } from '../rxjs-operators/rxjs-operators.component';
 
 @Component({
   selector: 'app-rxjs-component',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RxjsOperatorsComponent],
   templateUrl: './rxjs-component.component.html',
   styleUrl: './rxjs-component.component.css',
 })
@@ -22,7 +23,10 @@ export default class RxjsComponentComponent implements OnInit {
 
 
 
+
   ngOnInit(): void {
+
+  
     this.createObservable();
 
    
@@ -84,10 +88,10 @@ export default class RxjsComponentComponent implements OnInit {
     });
   }
 
-
-  ofo =  of(7, 3, 3)
-  .pipe(map((x) => x * x))
-  .subscribe((v) => console.log(`value: ${v}`));
+ 
 
 
+
+
+ 
 }
