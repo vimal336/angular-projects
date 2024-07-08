@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { interval, Observable, Subscription } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Data } from '@angular/router';
@@ -28,7 +28,12 @@ export class RxjsOperatorsComponent implements OnInit{
   console.log(c)
 })
 
-  }
+let customobservable = Observable.create( observer =>{
+  console.log(observer)
+})
+
+
+}
 
   ngOnDestroy(): void {
     this.intervalSubscription?.unsubscribe();
