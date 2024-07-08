@@ -14,11 +14,11 @@ import { ActivatedRoute, Data } from '@angular/router';
 export class RxjsOperatorsComponent implements OnInit{
   values: number[] = [];
   intervalSubscription: Subscription | undefined;
+  routeSubscription: Subscription | undefined;
 
   constructor(private route:ActivatedRoute){
 
   }
-  private subscription: Subscription | undefined;
 
   ngOnInit(): void {
     this.route.data.subscribe((data: Data) => {
@@ -32,5 +32,6 @@ export class RxjsOperatorsComponent implements OnInit{
 
   ngOnDestroy(): void {
     this.intervalSubscription?.unsubscribe();
+    this.routeSubscription?.unsubscribe();
     }
   }
