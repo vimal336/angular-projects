@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, Observable, Subscription } from 'rxjs';
+import { interval, map, Observable, Subscription } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Data } from '@angular/router';
@@ -28,20 +28,36 @@ export class RxjsOperatorsComponent implements OnInit{
   console.log(c)
 })
 
+//Creating Custom observable 
+
 let customobservable = Observable.create( (observer:any) =>{
 
 let count  = 0;
 
-setInterval(()=>{
+let invalidInterval = setInterval(()=>{
 observer.next(count);
-count++
-},1000)
+if(count > 3){
+  observer.error('count is greater than 3');
+  clearInterval(invalidInterval);
+}
 
-this.intervalSubscription = customobservable.subscribe( (data: any) =>{
-  console.log(data)
+if(count > 2){
+  observer.complete();
+}
+
+count++
+},1000);
+
 })
 
-
+this.intervalSubscription = customobservable.pipe(map(data => {
+  return 'count is ' + (data);
+})).subscribe( (data: number) =>{
+  console.log(data)
+}, (error: any) =>{
+  console.log(error)
+},()=>{
+  console.log("completed")
 })
 
 
