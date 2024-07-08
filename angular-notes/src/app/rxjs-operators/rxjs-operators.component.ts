@@ -29,7 +29,10 @@ export class RxjsOperatorsComponent implements OnInit{
 })
 
 let customobservable = Observable.create( observer =>{
-  console.log(observer)
+
+let count  = 0;
+
+
 })
 
 
