@@ -28,9 +28,18 @@ export class RxjsOperatorsComponent implements OnInit{
   console.log(c)
 })
 
-let customobservable = Observable.create( observer =>{
+let customobservable = Observable.create( (observer:any) =>{
 
 let count  = 0;
+
+setInterval(()=>{
+observer.next(count);
+count++
+},1000)
+
+this.intervalSubscription = customobservable.subscribe( (data: any) =>{
+  console.log(data)
+})
 
 
 })
@@ -40,6 +49,6 @@ let count  = 0;
 
   ngOnDestroy(): void {
     this.intervalSubscription?.unsubscribe();
-    this.routeSubscription?.unsubscribe();
+    //this.routeSubscription?.unsubscribe();
     }
   }
