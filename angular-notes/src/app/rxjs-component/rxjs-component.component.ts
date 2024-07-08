@@ -85,7 +85,9 @@ export default class RxjsComponentComponent implements OnInit {
   }
 
 
-
+  ofo =  of(7, 3, 3)
+  .pipe(map((x) => x * x))
+  .subscribe((v) => console.log(`value: ${v}`));
 
 
 }
