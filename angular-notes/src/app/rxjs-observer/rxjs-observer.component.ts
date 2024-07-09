@@ -1,6 +1,7 @@
-import { Component, DestroyRef, OnInit } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { interval, map, Subscription } from 'rxjs';
 
 
 @Component({
@@ -11,8 +12,19 @@ import { CommonModule } from '@angular/common';
   styleUrl: './rxjs-observer.component.css'
 })
 export class RxjsObserverComponent implements OnInit {
-  ngOnInit(): void {
-   private destroyref = inject(DestroyRef)
-  }
+  private destroyRef = inject(DestroyRef);
 
+  
+  ngOnInit(): void {
+   const subscription = interval(1000).pipe().subscribe({
+     next: (val) => console.log(val)
+   });
+
+ 
+   this.destroyRef.onDestroy(()=>{
+    Subscription.unsubscribe();
+  })
+
+
+  }
 }
