@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, map, Observable, Subscription } from 'rxjs';
+import { interval, map, Observable, range, Subscription } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Data } from '@angular/router';
@@ -26,7 +26,7 @@ export class RxjsOperatorsComponent implements OnInit{
       console.log(data)
     });
    this.intervalSubscription = interval(1000).subscribe( c =>{
-  console.log(c)
+  // console.log(c)
 })
 
 //Creating Custom observable 
@@ -61,6 +61,12 @@ this.intervalSubscription = customobservable.pipe(map(data => {
   console.log("completed")
 })
 
+const numbers = range(5, 8);
+ 
+numbers.subscribe({
+  next: value => console.log(value),
+  complete: () => console.log('Completee!')
+});
 
 }
 
