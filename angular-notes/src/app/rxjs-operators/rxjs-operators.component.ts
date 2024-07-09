@@ -65,6 +65,6 @@ this.intervalSubscription = customobservable.pipe(map(data => {
 
   ngOnDestroy(): void {
     this.intervalSubscription?.unsubscribe();
-    //this.routeSubscription?.unsubscribe();
+    this.routeSubscription?.unsubscribe();
     }
   }
