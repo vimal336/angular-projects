@@ -3,11 +3,12 @@ import { interval, map, Observable, Subscription } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Data } from '@angular/router';
+import { RxjsObserverComponent } from '../rxjs-observer/rxjs-observer.component';
 
 @Component({
   selector: 'app-rxjs-operators',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule,RxjsObserverComponent],
   templateUrl: './rxjs-operators.component.html',
   styleUrl: './rxjs-operators.component.css'
 })
