@@ -1,7 +1,7 @@
 import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { interval, map} from 'rxjs';
+import { interval, map, of} from 'rxjs';
 
 
 @Component({
@@ -11,12 +11,12 @@ import { interval, map} from 'rxjs';
   templateUrl: './rxjs-observer.component.html',
   styleUrl: './rxjs-observer.component.css'
 })
-export class RxjsObserverComponent implements OnInit {
-
-
-  ngOnInit(): void {
+export class RxjsObserverComponent {
   
-
-
+  constructor(){
+    const numbers$ = of([1,2,3,4,5])
+    numbers$.subscribe((data)=>{
+      console.log("subscriber", data);
+    })
   }
 }
