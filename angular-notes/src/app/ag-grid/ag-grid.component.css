@@ -1,3 +1,32 @@
+.ag-theme-quartz {
+    --ag-background-color: #2b2b2b;
+    --ag-header-background-color: #1a1a1a;
+    --ag-row-hover-color: #444;
+    --ag-border-color: #555;
+    --ag-header-foreground-color: #fff;
+    --ag-odd-row-background-color: #333;
+    --ag-even-row-background-color: #2b2b2b;
+    --ag-foreground-color: #f3f3f3;
+    --ag-secondary-foreground-color: #ccc;
+    --ag-row-border-color: #444;
+  }
+  
+  .ag-theme-quartz .ag-header {
+    color: var(--ag-header-foreground-color);
+  }
+  
+  .ag-theme-quartz .ag-cell {
+    color: var(--ag-foreground-color);
+  }
+  
+  .ag-theme-quartz .ag-row {
+    border-bottom: 1px solid var(--ag-row-border-color);
+  }
+  
+  .ag-theme-quartz .ag-row-hover {
+    background-color: var(--ag-row-hover-color);
 
+  }
+  
 
 

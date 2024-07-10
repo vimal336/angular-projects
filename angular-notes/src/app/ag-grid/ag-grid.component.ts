@@ -1,5 +1,5 @@
 import { AgGridAngular, AgGridModule } from 'ag-grid-angular';
-import { ColDef } from 'ag-grid-community';
+import { ColDef, GridOptions } from 'ag-grid-community';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { Component } from '@angular/core';
@@ -14,20 +14,38 @@ import { Component } from '@angular/core';
 })
 export class AgGridComponent {
    
-rowData = [
-  { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-  { make: "Ford", model: "F-Series", price: 33850, electric: false },
-  { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-];
+  rowData = [
+    { company: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { company: "Ford", model: "F-Series", price: 33850, electric: false },
+    { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+  ];
 
+  colDefs: ColDef[] = [
+    { field: "company", headerName: "Company",  headerTooltip: "Name of the company", sortable: true, filter: true },
+    { field: "model", sortable: true, filter: true },
+    { field: "price", sortable: true, filter: true },
+    { field: "electric", sortable: true, filter: true, editable: true }
+  ];
 
-colDefs: ColDef[] = [
-  { field: "make" },
-  { field: "model" },
-  { field: "price" },
-  { field: "electric" }
-];
+  gridOptions: GridOptions = {
+    defaultColDef: {
+      sortable: true,
+      filter: true,
+      resizable: true
+    },
+    pagination: true,
+    paginationPageSize: 10,
+    rowSelection: 'multiple',
+    domLayout: 'autoHeight',
+    onGridReady: this.onGridReady.bind(this),
+    onRowClicked: this.onRowClicked.bind(this)
+  };
 
+  onGridReady(params: any) {
+    console.log('Grid is ready');
+  }
 
+  onRowClicked(event: any) {
+    console.log('Row clicked', event.data);
+  }
 }
-
