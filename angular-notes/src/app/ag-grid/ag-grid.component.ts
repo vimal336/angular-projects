@@ -3,12 +3,13 @@ import { ColDef, GridOptions } from 'ag-grid-community';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import { Component } from '@angular/core';
+import { AgGridApiComponent } from '../ag-grid-api/ag-grid-api.component';
 
 
 @Component({
   selector: 'app-ag-grid',
   standalone: true,
-  imports: [AgGridModule,AgGridAngular],
+  imports: [AgGridModule,AgGridAngular,AgGridApiComponent],
   templateUrl: './ag-grid.component.html',
   styleUrls: ['./ag-grid.component.css']
 })

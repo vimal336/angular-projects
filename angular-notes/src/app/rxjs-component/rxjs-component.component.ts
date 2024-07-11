@@ -21,9 +21,6 @@ export default class RxjsComponentComponent implements OnInit {
   ofval: string[] = [];
 
 
-
-
-
   ngOnInit(): void {
 
   
