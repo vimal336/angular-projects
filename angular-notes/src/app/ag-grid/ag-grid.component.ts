@@ -12,6 +12,7 @@ import { Component } from '@angular/core';
   templateUrl: './ag-grid.component.html',
   styleUrls: ['./ag-grid.component.css']
 })
+
 export class AgGridComponent {
    
   rowData = [
@@ -50,4 +51,4 @@ export class AgGridComponent {
   onRowClicked(event: any) {
     console.log('Row clicked', event.data);
   }
-}
+} 

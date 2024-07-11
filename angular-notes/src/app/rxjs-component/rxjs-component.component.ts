@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, interval } from 'rxjs';
+import { Observable, fromEvent, interval } from 'rxjs';
 import { of } from 'rxjs';
 import { from, take } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -86,9 +86,15 @@ export default class RxjsComponentComponent implements OnInit {
       this.customObservableValues.push(value);
       console.log(value);
     });
+
+    const clicks = fromEvent(document, 'click');
+    clicks.subscribe(x => console.log(x));
+    
+
   }
 
- 
+
+
 
 
 
