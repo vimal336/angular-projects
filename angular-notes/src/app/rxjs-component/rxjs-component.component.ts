@@ -3,7 +3,7 @@ import { Observable, fromEvent, interval } from 'rxjs';
 import { of } from 'rxjs';
 import { from, take } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { count, filter, map } from 'rxjs/operators';
+import { count, filter, map, tap } from 'rxjs/operators';
 import { RxjsOperatorsComponent } from '../rxjs-operators/rxjs-operators.component';
 
 @Component({
@@ -77,14 +77,20 @@ export default class RxjsComponentComponent implements OnInit {
       observer.complete();
     });
 
+const source = of(1, 2, 3, 4, 5);
+source.pipe(
+  tap(n => {
+    if (n > 3) {
+      throw new TypeError(`Value ${ n } is greater than 3`);
+    }
+  })
+)
+.subscribe({ next: console.log, error: err => console.log(err.message) });
     customObservable.subscribe((value) => {
       this.customObservableValues.push(value);
       console.log(value);
     });
-
     const clicks = fromEvent(document, 'click');
     clicks.subscribe(x => console.log(x));
-    
-
   }
 }
