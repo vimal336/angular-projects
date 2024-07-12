@@ -20,6 +20,32 @@ export class AgGridComponent {
     { company: "Tesla", model: "Model Y", price: 64950, electric: true },
     { company: "Ford", model: "F-Series", price: 33850, electric: false },
     { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { company: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { company: "Ford", model: "F-Series", price: 33850, electric: false },
+    { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { company: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { company: "Ford", model: "F-Series", price: 33850, electric: false },
+    { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { company: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { company: "Ford", model: "F-Series", price: 33850, electric: false },
+    { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { company: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { company: "Ford", model: "F-Series", price: 33850, electric: false },
+    { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { company: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { company: "Ford", model: "F-Series", price: 33850, electric: false },
+    { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { company: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { company: "Ford", model: "F-Series", price: 33850, electric: false },
+    { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+    { company: "Tesla", model: "Model Y", price: 64950, electric: true },
+    { company: "Ford", model: "F-Series", price: 33850, electric: false },
+    { company: "Toyota", model: "Corolla", price: 29600, electric: false },
+    
+
+
+    
+
   ];
 
   colDefs: ColDef[] = [

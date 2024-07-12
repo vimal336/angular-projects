@@ -1,7 +1,9 @@
 <h1 style="background-color:rgb(224, 214, 214) ; text-align: center;">AG GRID TABLE</h1>
 
 <ag-grid-angular
-    class="ag-theme-quartz" style="height:200px; width:900px;"
+[pagination]="true"
+      [paginationPageSizeSelector]="[5,10,20,50,100,500]"
+    class="ag-theme-quartz" style="height:700px; width:900px;"
       [rowData]="rowData "
       [columnDefs]="colDefs">
   </ag-grid-angular>
