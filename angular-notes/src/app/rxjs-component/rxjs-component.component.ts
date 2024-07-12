@@ -23,14 +23,12 @@ export default class RxjsComponentComponent implements OnInit {
 
   ngOnInit(): void {
 
-  
     this.createObservable();
 
-   
     of('task1', 'task2', 'task3').subscribe((ofval) => this.ofval.push(ofval));
     console.log(this.ofval);
 
-    const observable = of(15, 16, 18, 20, 21).pipe(
+    const observable = of(15, 17, 18, 20, 21).pipe(
       filter(value => value % 2 === 0)
     );
     observable.subscribe(value => console.log(value));
@@ -89,12 +87,4 @@ export default class RxjsComponentComponent implements OnInit {
     
 
   }
-
-
-
-
-
-
-
- 
 }
