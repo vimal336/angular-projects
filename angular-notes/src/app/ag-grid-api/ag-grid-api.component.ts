@@ -51,7 +51,7 @@ export class AgGridApiComponent implements OnInit {
   }
 
   getUser() {
-    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe((res:any)=>{
+    this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((res:any)=>{
       this.userList =  res;
     })
   }
