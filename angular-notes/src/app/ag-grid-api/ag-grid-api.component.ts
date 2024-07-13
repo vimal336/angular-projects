@@ -32,8 +32,8 @@ export class AgGridApiComponent implements OnInit {
 
   defaultColDef = {
     flex:1,
-    minWdith:100
-  }
+    minWdith:10
+  }dttegger
 
   constructor(private http: HttpClient){
 
