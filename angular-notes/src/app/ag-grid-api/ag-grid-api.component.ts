@@ -33,7 +33,7 @@ export class AgGridApiComponent implements OnInit {
   defaultColDef = {
     flex:1,
     minWdith:100
-  }dttegger
+  }
 
   constructor(private http: HttpClient){
 
