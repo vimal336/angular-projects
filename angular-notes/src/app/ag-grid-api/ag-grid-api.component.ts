@@ -26,7 +26,7 @@ export class AgGridApiComponent implements OnInit {
     },
     { field: "name", headerName: 'Name',filter:'agTextColumnFilter' },
     { field: "username", headerName:'User Name' },
-    { field: "email" ,headerName:'E-mail', editable: true},
+    { field: "email" ,headerName:'e-mail', editable: true},
    
   ];
 
