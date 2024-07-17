@@ -1,14 +1,17 @@
+<!-- src/app/todo/todo.component.html -->
 <div>
-    <h2>Todo List</h2>
-    <input [(ngModel)]="newTodoTitle" placeholder="New Todo">
-    <button (click)="addTodo()">Add Todo</button>
-  
-    <ul>
-      <li *ngFor="let todo of todos$ | async">
-        <input type="checkbox" [checked]="todo.completed" (change)="toggleComplete(todo)">
-        {{ todo.title }}
-        <button (click)="remove(todo)">Remove</button>
-      </li>
-    </ul>
+  <h2>Todo List</h2>
+  <input [(ngModel)]="newTodoTitle" placeholder="New Todo">
+  <button (click)="addTodo()">Add Todo</button>
+
+  <ul>
+    <li *ngFor="let todo of todos$ | async">
+      <input type="checkbox" [checked]="todo.completed" (change)="toggleComplete(todo)">
+      <span [ngClass]="{ 'completed': todo.completed }">{{ todo.title }}</span>
+      <button (click)="remove(todo)">Remove</button>
+      <button (click)="updateTodo(todo, { title: todo.title })">Update</button>
+    </li>
+  </ul>
 </div>
+
   
