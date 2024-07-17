@@ -73,8 +73,8 @@ li button:hover {
     background-color: #c82333;
 }
 
-/* src/app/todo/todo.component.css */
 .completed {
     text-decoration: line-through;
+    color: red;
   }
   
