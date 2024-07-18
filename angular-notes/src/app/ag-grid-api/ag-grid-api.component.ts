@@ -42,12 +42,14 @@ export class AgGridApiComponent implements OnInit {
   ngOnInit(): void {
     this.getUser();
   }
+
+
   onGridReady(event: GridReadyEvent<any>) {
     this.gridApi = event.api;
   }
 
   onBtExport() {
-    this.gridApi.exportDataAsCsv();
+    this.gridApi.;
   }
 
   getUser() {
