@@ -61,15 +61,15 @@ export class AgGridComponent {
     paginationPageSize: 10,
     rowSelection: 'multiple',
     domLayout: 'autoHeight',
-    onGridReady: this.onGridReady.bind(this),
-    onRowClicked: this.onRowClicked.bind(this)
+    // onGridReady: this.onGridReady.bind(this),
+    // onRowClicked: this.onRowClicked.bind(this)
   };
 
-  onGridReady(params: any) {
-    console.log('Grid is ready');
-  }
+  // onGridReady(params: any) {
+  //   console.log('Grid is ready');
+  // }
 
-  onRowClicked(event: any) {
-    console.log('Row clicked', event.data);
-  }
+  // onRowClicked(event: any) {
+  //   console.log('Row clicked', event.data);
+  // }
 } 
