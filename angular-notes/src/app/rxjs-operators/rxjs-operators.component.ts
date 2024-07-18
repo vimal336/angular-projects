@@ -16,6 +16,7 @@ export class RxjsOperatorsComponent implements OnInit{
   values: number[] = [];
   intervalSubscription: Subscription | undefined;
   routeSubscription: Subscription | undefined;
+  timer: any | undefined;
 
   constructor(private route:ActivatedRoute){
 
@@ -74,4 +75,13 @@ numbers.subscribe({
     this.intervalSubscription?.unsubscribe();
     //this.routeSubscription?.unsubscribe();
     }
-  }
+
+    sendData(val: any){
+      clearTimeout(this.timer);
+      this.timer = setTimeout(()=>{
+        console.log(val)
+      },500)
+    }
+  
+  
+}
