@@ -9,6 +9,7 @@ import { AngularHttpAuthComponent } from './angular-http-auth/angular-http-auth.
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import RxjsComponentComponent from './rxjs-component/rxjs-component.component';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
+import { RxjsDebounceComponent } from './rxjs-debounce/rxjs-debounce.component';
 
 export const routes: Routes = [
     {
@@ -51,8 +52,13 @@ export const routes: Routes = [
     {
         path: 'ag-grid',
         component: AgGridComponent
-    }
- 
+    },
+    
+    {
+        path: 'rxjs-debounce',
+        component: RxjsDebounceComponent
+    },
+    
  
  
  
