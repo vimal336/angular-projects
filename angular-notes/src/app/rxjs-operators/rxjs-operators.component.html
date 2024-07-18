@@ -7,10 +7,11 @@
   </ul>
 </div>
 
-
 <div style="margin: auto;">
-<input placeholder="Search" name="search" [(ngModel)]="name">
+  <input [formControl]="searchControl" placeholder="Search" name="search">
+  <p>Counter: {{ counter }}</p>
 </div>
+
 
 <app-rxjs-observer></app-rxjs-observer>
 

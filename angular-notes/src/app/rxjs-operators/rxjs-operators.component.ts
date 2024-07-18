@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Data } from '@angular/router';
 import { RxjsObserverComponent } from '../rxjs-observer/rxjs-observer.component';
 
+
 @Component({
   selector: 'app-rxjs-operators',
   standalone: true,
@@ -18,8 +19,9 @@ export class RxjsOperatorsComponent implements OnInit{
   routeSubscription: Subscription | undefined;
   timer: any | undefined;
 
-  constructor(private route:ActivatedRoute){
 
+  constructor(private route:ActivatedRoute){
+   
   }
 
   ngOnInit(): void {
@@ -69,19 +71,12 @@ numbers.subscribe({
   complete: () => console.log('Completee!')
 });
 
+
 }
 
   ngOnDestroy(): void {
     this.intervalSubscription?.unsubscribe();
     //this.routeSubscription?.unsubscribe();
     }
-
-    sendData(val: any){
-      clearTimeout(this.timer);
-      this.timer = setTimeout(()=>{
-        console.log(val)
-      },500)
-    }
-  
   
 }

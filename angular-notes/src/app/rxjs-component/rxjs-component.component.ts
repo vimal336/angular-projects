@@ -2,14 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, fromEvent, interval } from 'rxjs';
 import { of } from 'rxjs';
 import { from, take } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { count, filter, map, tap } from 'rxjs/operators';
+import { filter, map, tap } from 'rxjs/operators';
 import { RxjsOperatorsComponent } from '../rxjs-operators/rxjs-operators.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-rxjs-component',
   standalone: true,
-  imports: [CommonModule,RxjsOperatorsComponent],
+  imports: [CommonModule,RxjsOperatorsComponent,FormsModule,ReactiveFormsModule],
   templateUrl: './rxjs-component.component.html',
   styleUrl: './rxjs-component.component.css',
 })
@@ -19,11 +21,10 @@ export default class RxjsComponentComponent implements OnInit {
   customObservableValues: number[] = [];
   intervalValue: number[] = [];
   ofval: string[] = [];
-
+  searchControl: any;
+  counter: any;
 
   ngOnInit(): void {
-
-    this.createObservable();
 
     of('task1', 'task2', 'task3').subscribe((ofval) => this.ofval.push(ofval));
     console.log(this.ofval);
