@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { forkJoin } from 'rxjs';
+import { combineLatest, forkJoin, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,10 +17,10 @@ export class MathsService {
   }
 
   getData() {
-    const request1 = this.http.get('https:jsonplaceholder.typicode.com/posts');
-    const request2 = this.http.get('https:jsonplaceholder.typicode.com/posts');
-    const request3 = this.http.get('https:jsonplaceholder.typicode.com/posts');
-
+    const request1 = this.http.get('https:jsonplaceholder.typicode.com/posts/1');
+    const request2 = this.http.get('https:jsonplaceholder.typicode.com/posts/2');
+    const request3 = this.http.get('https:jsonplaceholder.typicode.com/posts/3');
+    
     return forkJoin([request1, request2, request3]);
   }
 

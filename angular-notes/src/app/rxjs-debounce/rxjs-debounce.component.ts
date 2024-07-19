@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { FormsModule } from '@angular/forms';
 import { MathsService } from '../services/maths.service';
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-rxjs-debounce',
   standalone: true,
-  imports: [FormsModule,ReactiveFormsModule],
+  imports: [FormsModule,ReactiveFormsModule,CommonModule],
   templateUrl: './rxjs-debounce.component.html',
   styleUrl: './rxjs-debounce.component.css'
 })
@@ -30,12 +30,13 @@ export class RxjsDebounceComponent {
       }
     );
     this.searchControl.valueChanges
-      .pipe(
-        debounceTime(1000) 
-      )
-      .subscribe(value => {
-        this.searchText = value;
-        console.log(value);
-      });
+    .pipe(
+      debounceTime(1000),
+      distinctUntilChanged()
+    )
+    .subscribe(value => {
+      this.searchText = value;
+      console.log(value);
+    });
   }
 }
