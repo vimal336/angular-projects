@@ -40,3 +40,7 @@ export class RxjsDebounceComponent {
     });
   }
 }
+
+
+//distinctuntil only triggers if the previous value is differ from the current value
+//122334 => 1234
