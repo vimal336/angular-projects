@@ -3,6 +3,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 import { FormsModule } from '@angular/forms';
 import { MathsService } from '../services/maths.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-rxjs-debounce',
