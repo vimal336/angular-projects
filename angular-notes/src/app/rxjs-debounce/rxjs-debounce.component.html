@@ -1,5 +1,10 @@
 <div style="margin: auto;">
     <input [formControl]="searchControl" placeholder="Search" name="search">
     <p>Search Text: {{ searchText }}</p>
-  </div>
+</div>
   
+<div *ngIf="data">
+    <div>Data 1: {{ data[0] | json }}</div>
+    <div>Data 2: {{ data[1] | json }}</div>
+    <div>Data 3: {{ data[2] | json }}</div>
+  </div>
