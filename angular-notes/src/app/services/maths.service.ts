@@ -21,7 +21,7 @@ export class MathsService {
     const request2 = this.http.get('https:jsonplaceholder.typicode.com/posts/2');
     const request3 = this.http.get('https:jsonplaceholder.typicode.com/posts/3');
     
-    return forkJoin([request1, request2, request3]);
+    return forkJoin([request1, request2, request4]);
   }
 
   
