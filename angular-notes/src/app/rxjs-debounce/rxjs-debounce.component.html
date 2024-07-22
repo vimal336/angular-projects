@@ -12,15 +12,4 @@
     <div>Data 3: {{ data[2] | json }}</div>
   </div>
 
-  
-<div>
-    <form (ngSubmit)="onSubmit()">
-      <label for="name">Name:</label>
-      <input type="text" id="name" [(ngModel)]="name" name="name" (ngModelChange)="onNameChange($event)" />
-      <button type="submit">Submit</button>
-    </form>
-    <div *ngFor="let log of logs">
-      {{ log }}
-    </div>
-  </div>
-  
+
