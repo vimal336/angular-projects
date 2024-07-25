@@ -1,12 +1,12 @@
 export interface FormState {
-  id: number;
+  id: number | null;
   name: string;
   email: string;
 }
 
 export function createInitialState(): FormState {
   return {
-    id: 0,
+    id: null,
     name: '',
     email: ''
   };
