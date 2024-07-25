@@ -1,0 +1,21 @@
+form{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 10px;
+  }
+  
+  input.ng-invalid.ng-touched {
+    border-color: red;
+  }
+
+  .valid{
+    font-size: small;
+    font-weight: 900;
+    color: red;
+  }
