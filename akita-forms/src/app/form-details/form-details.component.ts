@@ -33,7 +33,7 @@ export class FormDetailsComponent implements OnInit {
     this.formQuery.select().subscribe((state) => {
       if (state) {
         this.form.patchValue(state);
-        console.log(state)
+        // console.log(state)
       }
     });
   }
