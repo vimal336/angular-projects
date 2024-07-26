@@ -1,5 +1,5 @@
 export interface FormState {
-  id: number | null;
+  id: number|null;
   name: string;
   email: string;
 }
@@ -11,3 +11,4 @@ export function createInitialState(): FormState {
     email: ''
   };
 }
+

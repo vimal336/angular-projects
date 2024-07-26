@@ -1,7 +1,31 @@
-<form (ngSubmit)="onSubmit()">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <label for="name">Name:</label>
-  <input type="text" id="name" [(ngModel)]="form.name" name="name">
+  <input type="text" id="name" formControlName="name">
+  <div class="error-message" *ngIf="form.get('name')!.invalid && form.get('name')!.touched">
+    *Name is required*
+  </div>
+
   <label for="email">Email:</label>
-  <input type="email" id="email" [(ngModel)]="form.email" name="email">
-  <button type="submit">Submit</button>
+  <input type="email" id="email" formControlName="email">
+  <div *ngIf="form.get('email')!.invalid && form.get('email')!.touched">
+    <div class="error-message" *ngIf="form.get('email')!.errors?.['required']">*Email is required*</div>
+    <div class="error-message" *ngIf="form.get('email')!.errors?.['email']">*Email is invalid*</div>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Submit</button>
 </form>
+
+<table *ngIf="submittedData.length > 0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of submittedData">
+      <td>{{ data.name }}</td>
+      <td>{{ data.email }}</td>
+    </tr>
+  </tbody>
+</table>

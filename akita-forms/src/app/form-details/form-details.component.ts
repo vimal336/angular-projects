@@ -13,20 +13,37 @@ import { FormState } from '../store/employee.model';
   styleUrl: './form-details.component.css'
 })
 export class FormDetailsComponent implements OnInit {
-  form: FormState = { id:null, name: '', email: '' };
+  form: FormGroup;
 
-     constructor(private formService: FormService, private formQuery: FormQuery) {}
+  submittedData: any[] = [];
 
-     
-     ngOnInit() {
-      this.formQuery.select(state => state).subscribe(form => {
-        if (form) {
-          this.form = { ...form };
-        }
-      });
+  constructor(
+    private fb: FormBuilder,
+    private formService: FormService,
+    private formQuery: FormQuery
+  ) {
+  
+    this.form = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]]
+    });
+  }
+
+  ngOnInit() {
+    this.formQuery.select().subscribe((state) => {
+      if (state) {
+        this.form.patchValue(state);
+        console.log(state)
+      }
+    });
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      this.formService.updateForm(this.form.value);
+      console.log(this.formService)
+      this.submittedData.push(this.form.value);
+      // console.log(this.form.value)
     }
-
-     onSubmit() {
-       this.formService.updateForm(this.form);
-     }
-   }
+  }
+}
